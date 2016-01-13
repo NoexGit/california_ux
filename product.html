@@ -1,0 +1,351 @@
+<html lang="ru" ng-app="panel-california" class="ng-scope"><head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script type='text/javascript'>
+    $(document).ready(function(){
+            $('#edit_product_240846 input').keydown(function(e){
+             if(e.keyCode==13){
+
+                if($(':input:eq(' + ($(':input').index(this) + 1) + ')').attr('type')=='submit'){// check for submit button and submit form on enter press
+                 return true;
+                }
+
+                $(':input:eq(' + ($(':input').index(this) + 1) + ')').focus();
+
+               return false;
+             }
+
+            });
+        });
+</script>
+
+
+
+    <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>
+10586 : Вода Ювента 0,5л н/гАктив(8) - Панель Калифорния
+</title>
+ <link rel="stylesheet" media="all" href="http://staging.abmcloud.us/assets/application_new-2d4d4f9e563af19465677f99f61d2804.css">
+      <link href="style/style.css" media="all" rel="stylesheet">
+               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="8mdBei8JGys9jkMds82H5XFXA4DgeroOhv5BmvCK+pNJuWR27k/8JAmGv4d0H9JSrV4d962UrPXvvgoEYp/2ag==">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
+</head>
+<body class="page-products page-products-edit" id="app">
+<div class="main-wrapper">
+<div class="logout-panel">
+<div class="item-log-panel">
+<i class="fa fa-user" style="font-size: 41px"></i>
+</div>
+<div class="item-log-panel user-info">
+<div class="dropdown">
+<a class="visible-item" data-toggle="dropdown" href="#">
+<span class="txt">
+Super Admin
+<span class="famfamfam-flag-ru" title="ru"></span>
+</span>
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=test_delikat&amp;locale=en"><span class="famfamfam-flag-en" title="en"></span>
+Английский
+</a></li>
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=test_delikat&amp;locale=ru"><span class="famfamfam-flag-ru" title="ru"></span>
+Русский
+</a></li>
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=test_delikat&amp;locale=uk"><span class="famfamfam-flag-uk" title="uk"></span>
+Украинский
+</a></li>
+</ul>
+</div>
+</div>
+<div class="item-log-panel wrap-out pull-right">
+<a id="logout-link" title="Выйти" href="/logout?company_id=test_delikat"><i class="fa fa-power-off"></i>
+</a></div>
+</div>
+<div class="left-panel">
+<span class="handle">
+<span class="icon icon-handle-left"></span>
+</span>
+<div class="head-logo">
+<a href="/test_delikat"><img class="img-responsive" src="../good2.png" alt="Thumb delikat tp">
+</a><div class="sub-logo">
+Тестовый Деликат
+</div>
+</div>
+<ul class="menu" id="main-nav">
+<li class=""><a class="first-level" href="/admin/companies"><i class="fa fa-mail-reply"></i><span><span class="translation_missing" title="translation missing: ru.application.left_panel.back_to_admin">Back To Admin</span></span></a></li>
+<li class="active"><a class="first-level open" href="#"><i class="fa fa-folder-open"></i><span>Каталоги</span><i class="fa fa-angle-right"></i></a><ul class="open"><li class="active"><a href="/test_delikat/catalogs/products">Товары</a></li>
+<li class=""><a href="/test_delikat/catalogs/dimensions">Ед.измерения</a></li>
+<li class=""><a href="/test_delikat/panel/supplier_dimensions">Ед.измерения поставщика</a></li>
+<li class=""><a href="/test_delikat/panel/suppliers">Поставщики</a></li>
+<li class=""><a href="/test_delikat/catalogs/order_split_marks">Признаки разделения</a></li>
+<li class=""><a href="/test_delikat/panel/currencies">Валюта</a></li>
+<li class=""><a href="/test_delikat/panel/periods">Периоды</a></li>
+<li class=""><a href="/test_delikat/panel/reasons">Причины</a></li>
+</ul></li><li class=""><a class="first-level" href="#"><i class="fa"><img width="30" src="../ui_buffer.png" alt="Icon buffer"></i><span>Буферы</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/test_delikat/panel/buffers_new_items">Буферы новых товаров</a></li>
+<li class=""><a href="/test_delikat/panel/buffers">Управление буферами</a></li>
+<li class=""><a href="/test_delikat/panel/buffers_changes">Изменение буфера</a></li>
+</ul></li><li class=""><a class="first-level" href="/test_delikat/panel/inventories"><i class="fa fa-cubes"></i><span>Запасы</span></a></li>
+<li class=""><a class="first-level" href="#"><i class="fa fa-shopping-cart"></i><span>Заказы</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/test_delikat/panel/order_templates/new">Создать заказ</a></li>
+<li class=""><a href="/test_delikat/panel/orders">Новые заказы</a></li>
+<li class=""><a href="/test_delikat/panel/placed_orders">Отправленные заказы</a></li>
+<li class=""><a href="/test_delikat/panel/sent_orders">История отправленных заказов</a></li>
+<li class=""><a href="/test_delikat/panel/supply_schedules">Графики поставок</a></li>
+</ul></li><li class=""><a class="first-level" href="#"><i class="fa fa-cog"></i><span>Настройки</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/test_delikat/panel/users">Пользователи</a></li>
+<li class=""><a href="/test_delikat/panel/roles">Роли пользователя</a></li>
+<li class=""><a href="/test_delikat/panel/warehouses">Склады</a></li>
+<li class=""><a href="/test_delikat/panel/warehouses/users">Склады пользователя</a></li>
+<li class=""><a href="/test_delikat/panel/reports/recipients">Отчеты</a></li>
+<li class=""><a href="/test_delikat/panel/import_excel_files">Импортировать</a></li>
+<li class=""><a href="/test_delikat/panel/manual_exchanges">Обмен</a></li>
+<li class=""><a href="/test_delikat/panel/logs/dbm">Журнал</a></li>
+</ul></li><li class=""><a class="first-level" href="/test_delikat/panel/system_warnings"><i class="fa fa-exclamation-triangle"></i><span>Системные ошибки</span></a></li>
+</ul>
+</div>
+
+<div class="container-fluid work-area">
+    <!-- Перенес row page-title в  panel-heading-->
+
+<div class="row" id="alerts-area">
+
+</div>
+<div class="progress-wrapper">
+<div class="inner text-center">
+<div class="fa-stack fa-lg">
+<i class="fa fa-cloud-download fa-stack-2x"></i>
+</div>
+<h3 class="m-t m-b" data-default-text="Загрузка...">
+Загрузка...
+</h3>
+<div class="progress progress-xs">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar progress-bar-striped active" style="width: 100%"></div>
+</div>
+</div>
+</div>
+
+<!-- .bg-light.lter.b-b.wrapper-md -->
+<!-- %h1.m-n.font-thin.h3 -->
+<!-- .row -->
+<!-- .col-lg-8 -->
+<!-- = yield :page_title -->
+<!-- .col-lg-4 -->
+<!-- .pull-right -->
+
+<div class="panel panel-default block">
+<div class="panel-heading">
+ <!-- Перенес row page-title в  panel-heading-->
+    <div class="row page-title">
+<div class="btn-left-menu btn-left-menu-js">
+<i class="fa fa-navicon"></i>
+</div>
+ <!- Добавил заголовок -->
+        <span>
+           Карточка товара
+            </span>
+<!-- Удалил page-title в  h1-->
+            <h1 class="">
+    10586 : Вода Ювента 0,5л н/гАктив(8)
+    </h1>
+</div>
+<ul class="nav nav-tabs">
+<li class="active">
+<a href="#">Главная</a>
+</li>
+<li>
+<a href="/test_delikat/panel/products/240846/warehouses?return_url=http%3A%2F%2Fabmcloud.us%2Ftest_delikat%2Fcatalogs%2Fproducts">Склады</a>
+</li>
+</ul>
+</div>
+<div class="panel-body">
+<form class="simple_form form-horizontal edit_product ng-pristine ng-valid" novalidate="novalidate" id="edit_product_240846" action="/test_delikat/catalogs/products/240846?return_url=http%3A%2F%2Fabmcloud.us%2Ftest_delikat%2Fcatalogs%2Fproducts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="8mdBei8JGys9jkMds82H5XFXA4DgeroOhv5BmvCK+pNJuWR27k/8JAmGv4d0H9JSrV4d962UrPXvvgoEYp/2ag==">
+<div class="col-xs-12 text-right">
+<a class="btn-primary btn" data-toggle="modal" href="#not-implemented-modal">Альтернативный SKU</a>
+</div>
+<div class="row">
+<!-- Добавил Sdiv class="col-md-1 - левый отступ-->
+    <div class="col-md-2">
+        </div>
+<div class="col-md-5 m-top wrapper-md">
+<div class="form-group string optional readonly product_sku">
+
+    <label class="string optional col-sm-4 control-label" for="product_sku">SKU</label>
+    <div class="col-sm-8"><input class="string optional readonly form-control" readonly="readonly" type="text" value="10586" name="product[sku]" id="product_sku">
+     <!-- Добавил Span под каждый Input - подчеркивание -->
+
+                <span></span>
+
+    </div>
+
+    </div>
+<!--  spellcheck="false"-->
+    <div class="form-group string optional product_name"><label class="string optional col-sm-4 control-label" for="product_name">Название</label><div class="col-sm-8"><input class="string optional form-control" placeholder="Введите название" type="text" value="Вода Ювента 0,5л н/гАктив(8)" name="product[name]" id="product_name" spellcheck="false">
+      <span></span>
+    </div>
+
+    </div>
+<!-- Для мелких поменял размеры -->
+<div class="form-group select optional product_dimension"><label class="select optional col-sm-4 control-label" for="product_dimension_id">Единицы измерения</label><div class="col-sm-5"><select class="select optional form-control" name="product[dimension_id]" id="product_dimension_id"><option value=""></option>
+<option selected="selected" value="33">Шт.</option>
+<option value="34">Упак.</option>
+<option value="35">???</option>
+<option value="37">Порция</option>
+<option value="38">Десяток</option>
+<option value="39">Л.</option>
+<option value="40">Грн.</option>
+<option value="41">Ящ.</option>
+<option value="42">Пара</option>
+<option value="43">М</option>
+<option value="44">Бут.</option>
+<option value="45">Гр.</option>
+<option value="36">Кг</option></select></div>
+
+
+    </div>
+<div class="form-group float optional product_measure_1"><label class="float optional col-sm-4 control-label" for="product_measure_1">Вес</label>
+    <div class="col-sm-5">
+        <input class="numeric float optional form-control" type="number" step="any" name="product[measure_1]" id="product_measure_1">
+         <span></span>
+
+
+    </div></div>
+<div class="form-group float optional product_measure_2"><label class="float optional col-sm-4 control-label" for="product_measure_2">Объем</label>
+    <div class="col-sm-5">
+        <input class="numeric float optional form-control" type="number" step="any" name="product[measure_2]" id="product_measure_2">
+    <span></span>
+
+    </div></div>
+<div class="col-md-8 col-md-offset-2">
+<!-- Подменил на col-md-3 с  col-md-2-->
+    <div class="col-md-3">
+<div class="form-group boolean optional product_top"><div class="col-sm-offset-3 col-sm-9">
+    <div class="checkbox"><input value="0" type="hidden" name="product[top]">
+    <label class="boolean optional" for="product_top">
+    <input class="boolean optional col-sm-9 " type="checkbox" value="1" name="product[top]" id="product_top">TOP</label></div></div></div>
+</div>
+<div class="col-md-3">
+<div class="form-group boolean optional product_non"><div class="col-sm-offset-3 col-sm-9"><div class="checkbox"><input value="0" type="hidden" name="product[non]"><label class="boolean optional" for="product_non"><input class="boolean optional col-sm-9" type="checkbox" value="1" name="product[non]" id="product_non">NON</label></div></div></div>
+</div>
+<div class="col-md-3">
+<div class="form-group boolean optional product_out"><div class="col-sm-offset-3 col-sm-9"><div class="checkbox"><input value="0" type="hidden" name="product[out]"><label class="boolean optional" for="product_out"><input class="boolean optional col-sm-9" type="checkbox" value="1" name="product[out]" id="product_out">OUT</label></div></div></div>
+</div>
+<div class="col-md-3">
+<div class="form-group boolean optional readonly product_alt"><div class="col-sm-offset-3 col-sm-9"><div class="checkbox"><input value="0" disabled="disabled" type="hidden" name="product[alt]"><label class="boolean optional" for="product_alt"><input disabled="disabled" class="boolean optional readonly col-sm-9" readonly="readonly" type="checkbox" value="1" name="product[alt]" id="product_alt">FAM</label></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-md-4 m-top wrapper-md">
+
+<div class="form-group string optional product_additional_1"><label class="string optional col-sm-3 control-label" for="product_additional_1">Группа-1</label><div class="col-sm-9"><input class="string optional form-control" type="text" value="Я (удаленные)" name="product[additional_1]" id="product_additional_1">
+    <span></span>
+    </div></div>
+<div class="form-group string optional product_additional_2"><label class="string optional col-sm-3 control-label" for="product_additional_2">Группа-2</label><div class="col-sm-7"><input class="string optional form-control" type="text" value="Куяльник" name="product[additional_2]" id="product_additional_2"><span></span>
+    </div></div>
+<div class="form-group string optional product_additional_3"><label class="string optional col-sm-3 control-label" for="product_additional_3">Группа-3</label><div class="col-sm-9"><input class="string optional form-control" type="text" name="product[additional_3]" id="product_additional_3"><span></span>
+    </div></div>
+<div class="form-group string optional product_additional_4"><label class="string optional col-sm-3 control-label" for="product_additional_4">Группа-4</label><div class="col-sm-9"><input class="string optional form-control" type="text" name="product[additional_4]" id="product_additional_4"><span></span>
+    </div></div>
+<div class="form-group string optional product_additional_5"><label class="string optional col-sm-3 control-label" for="product_additional_5">Группа-5</label><div class="col-sm-9"><input class="string optional form-control" type="text" name="product[additional_5]" id="product_additional_5"><span></span>
+    </div></div>
+<div class="form-group string optional product_additional_6"><label class="string optional col-sm-3 control-label" for="product_additional_6">Полное название</label><div class="col-sm-9"><input class="string optional form-control" type="text" value="Солодкі напоі  Вода Ювента 0,5л н/гАктив" name="product[additional_6]" id="product_additional_6"><span></span>
+    </div></div>
+<div class="form-group string optional product_additional_7"><label class="string optional col-sm-3 control-label" for="product_additional_7">Вид товара</label><div class="col-sm-9"><input class="string optional form-control" type="text" value="Товар" name="product[additional_7]" id="product_additional_7"><span></span>
+    </div></div>
+<div class="form-group string optional product_additional_8"><label class="string optional col-sm-3 control-label" for="product_additional_8">Тип товара</label><div class="col-sm-9"><input class="string optional form-control" type="text" value="Штучный целый" name="product[additional_8]" id="product_additional_8"><span></span>
+    </div></div>
+<div class="form-group string optional product_additional_9"><label class="string optional col-sm-3 control-label" for="product_additional_9">Торговая марка</label><div class="col-sm-9"><input class="string optional form-control" type="text" name="product[additional_9]" id="product_additional_9"><span></span>
+    </div></div>
+</div>
+<!-- Добавил Sdiv class="col-md-1 - левый отступ-->
+<div class="col-md-1">
+        </div>
+    </div>
+<div class="col-xs-12 text-right">
+<a id="save-btn" class="btn-success btn disabled" data-toggle="submit" data-target="form.edit_product" data-commit="save" href="#">Сохранить</a>
+</div>
+</form>
+
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="not-implemented-modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+</button>
+<h4 class="modal-title">This feature will be added in the future</h4>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--<footer class="page-foot">
+<div class="row">
+<div class="col-xs-12 vertical-cent">
+<p class="pull-left mrg-bot-0 mrg-left-40">© 2001-2016 ABM Cloud. Автоматизированная система управления запасами предприятия. Версия 1.9.0</p>
+</div>
+</div>
+</footer>-->
+
+</div>
+
+</div>
+  <script src="http://staging.abmcloud.us/assets/application-c4c3dd9e9aa797c77b750b036f27d128.js"></script>
+
+    <script src="http://staging.abmcloud.us/assets/controllers/products-1e2f325c5ce7af4a706d1a8b3998086d.js"></script>
+
+<script>
+//<![CDATA[
+Routes._defaults['company_id'] = 'test_delikat';
+//]]>
+</script><script>
+//<![CDATA[
+window.FAYE_URL = "http://abmcloud.us:9292/faye";
+window.FAYE_KEY = "bebca1a30a151a69e2e94cd3d2d153ca";
+
+//]]>
+</script>
+<script>
+  I18n.defaultLocale = "en";
+  I18n.locale = "ru";
+  I18n.available_locales = "en,ru,uk";
+  I18n.missingPlaceholder = function(placeholder, message) {
+     return placeholder;
+  };
+</script>
+
+<script>
+angular.module('currentCompany', []).service('current_company', function(){
+    return {"name":"Тестовый Деликат","id":2,"slug":"test_delikat"};
+});
+</script>
+
+<script>
+angular.module('currentUser', []).service('current_user', function(){
+    return {"id":1,"first_name":"Super","last_name":"Admin","user_settings":[{"settings_type":"items_filters","settings_value":[{"fid":"6e9781d0-4509-4941-8452-ea82b196f566","name":"топ","table":"items","filters":[{"value":true,"compare":"=","column_name":"product_top"}]},{"fid":"af104f34-d5f0-4c63-8f20-4783a1bff11f","name":"имя","table":"items","filters":[{"value":"имя","compare":"=","column_name":"product_name"}]},{"fid":"b10a61cb-97a7-40e6-815b-05a9cfd9c62d","name":"123","table":"items","filters":[{"value":true,"compare":"=","column_name":"product_alt"},{"value":null,"compare":"=","column_name":"product_sku_group"},{"value":true,"compare":"=","column_name":"product_non"}]}]},{"settings_type":"warehouse_product_columns_default","settings_value":["active","warehouse","supplier","manager","moq","balance","buffer","buffer_date","in_transit"]},{"settings_type":"inventory","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","balance","in_transit","bb_rate","btb_rate"]},{"settings_type":"item","settings_value":["name"]},{"settings_type":"warehouse_product","settings_value":["active","warehouse","supplier","manager","moq","balance","buffer","buffer_date","in_transit"]},{"settings_type":"buffer","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","buffer_date","balance","bb_rate","btb_rate","in_transit"]},{"settings_type":"buffers_change","settings_value":["buffer","name","warehouse","supplier","manager","movers","moq","balance","bb_rate","active","in_transit","btb_rate","buffer_date"]},{"settings_type":"buffers_new_item","settings_value":["name","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","buffer_date"]},{"settings_type":"order","settings_value":["supplier","warehouse","order_split_mark","manager","creation_date"]},{"settings_type":"edit_regular_order_item","settings_value":["name","movers","quantity","changes","btb_rate"]},{"settings_type":"edit_special_order_item","settings_value":["name","movers","quantity"]},{"settings_type":"placed_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"edit_placed_order_item","settings_value":["quantity","changes","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"confirm_placed_order_item","settings_value":["quantity","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"sent_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_item","settings_value":["name","sent_quantity","delivered_quantity"]},{"settings_type":"add_order_item","settings_value":["name","active","state","movers"]},{"settings_type":"buffer_columns_default","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","buffer_date","balance","bb_rate","btb_rate","in_transit"]},{"settings_type":"inventories_filters","settings_value":[{"fid":"e2801313-2846-42b7-9d12-245df5da71fe","name":"123","table":"inventories","filters":[{"value":true,"compare":"=","column_name":"wp_active"}]}]},{"settings_type":"buffers_new_item_columns_default","settings_value":["name","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","buffer_date"]},{"settings_type":"order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager","creation_date"]},{"settings_type":"placed_order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"buffers_change_columns_default","settings_value":["buffer","name","warehouse","supplier","manager","movers","moq","balance","bb_rate","active","in_transit","btb_rate","buffer_date"]},{"settings_type":"item_columns","settings_value":["name","top","non","out","alt","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","measure_1","measure_2"]},{"settings_type":"buffers_change","settings_value":["buffer","name","warehouse","supplier","manager","movers","moq","balance","bb_rate","active","in_transit","btb_rate","buffer_date"]},{"settings_type":"buffers_new_item","settings_value":["name","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","buffer_date"]},{"settings_type":"edit_regular_order_item","settings_value":["name","movers","quantity","changes","btb_rate"]},{"settings_type":"edit_special_order_item","settings_value":["name","movers","quantity"]},{"settings_type":"placed_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"edit_placed_order_item","settings_value":["quantity","changes","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"item_columns_default","settings_value":["name","top","non","out","alt","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","measure_1","measure_2"]},{"settings_type":"inventory_columns_default","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","balance","in_transit","bb_rate","btb_rate"]},{"settings_type":"edit_regular_order_item_columns_default","settings_value":["name","movers","quantity","changes","btb_rate"]},{"settings_type":"edit_special_order_item_columns","settings_value":["name","movers","quantity"]},{"settings_type":"inventory","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","balance","in_transit","bb_rate","btb_rate"]},{"settings_type":"item","settings_value":["name"]},{"settings_type":"warehouse_product","settings_value":["active","warehouse","supplier","manager","moq","balance","buffer","buffer_date","in_transit"]},{"settings_type":"buffer","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","buffer_date","balance","bb_rate","btb_rate","in_transit"]},{"settings_type":"order","settings_value":["supplier","warehouse","order_split_mark","manager","creation_date"]},{"settings_type":"confirm_placed_order_item","settings_value":["quantity","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"sent_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_item","settings_value":["name","sent_quantity","delivered_quantity"]},{"settings_type":"system_access_log_columns_default","settings_value":[]},{"settings_type":"graph_log_columns_default","settings_value":[]},{"settings_type":"buffers_new_item_columns","settings_value":["order_split_mark_code"]},{"settings_type":"edit_special_order_item_columns_default","settings_value":["name","movers","quantity"]},{"settings_type":"add_order_item_columns_default","settings_value":["name","active","state","movers"]},{"settings_type":"applied_buffers_new_items_filters","settings_value":{"fid":"006d4dc4-f216-4dac-9733-97130882702c","table":"buffers_new_items","filters":[{"value":true,"compare":"=","column_name":"wp_active"},{"value":0,"compare":"\u003e","column_name":"wp_moq"}]}},{"settings_type":"add_order_item","settings_value":["name","active","state","movers"]},{"settings_type":"warehouse_product_columns","settings_value":["warehouse_code","supplier_code","level","supplier","manager","manager_code","state","moq","balance","buffer","buffer_date","pto","in_transit","order_split_mark_code","safety_buffer","sb_1","min_buffer","max_buffer","usq","season","purchase_price","sale_price","limit","order_once","new","new_till","wh_additional_1","wh_additional_2","wh_additional_3","wh_additional_4"]},{"settings_type":"edit_placed_order_item_columns_default","settings_value":["quantity","changes","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"confirm_placed_order_item_columns_default","settings_value":["name","movers","sent_quantity"]},{"settings_type":"buffer_columns","settings_value":["active","bb_rate","btb_rate","balance","buffer","moq","name","next_order_date","sb_1","safety_buffer","order_split_mark_code","supplier","warehouse"]},{"settings_type":"order_schedule_log_columns_default","settings_value":[]},{"settings_type":"inventories_columns_width","settings_value":{"actions":"56","sku":"88","active":"69","name":"261","warehouse":"50","supplier":"168","manager":"72","movers":"62","moq":"44","buffer":"55","balance":"59","in_transit":"53","bb_rate":"94","btb_rate":"102"}},{"settings_type":"inventory_columns","settings_value":["active","bb_rate","btb_rate","balance","buffer","in_transit","moq","manager","movers","name","next_order_date","supplier","warehouse"]},{"settings_type":"inventory_log_columns_default","settings_value":[]},{"settings_type":"edit_regular_order_item_columns","settings_value":["btb_rate","changes","movers","name","supplier_name"]},{"settings_type":"applied_buffers_filters","settings_value":{"fid":"c2abae28-d873-4929-a74a-bfaaaf80888e","table":"buffers","filters":[{"value":"","compare":"≠","column_name":"wp_next_order_date"}]}},{"settings_type":"sent_order_item_columns_default","settings_value":["name","sent_quantity","delivered_quantity","movers"]},{"settings_type":"supplier_log_columns_default","settings_value":[]},{"settings_type":"order_log_columns_default","settings_value":[]},{"settings_type":"edit_regular_order_items_columns_width","settings_value":{"change":"41","actions":"68","sku":"55","quantity":"78","movers":"55","item_notes":"73","balance":"59","safety_buffer":"126","buffer":"55","free_amount":"134","order_quantity":"49","changes":"76","name":"370","btb_rate":"102","sum":"104"}},{"settings_type":"applied_inventories_filters","settings_value":{"fid":"0556a5e4-e047-46b3-9505-af81d5adea15","table":"inventories","filters":[{"value":true,"compare":"=","column_name":"product_out"}]}},{"settings_type":"placed_order_columns","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"buffers_change_columns","settings_value":["level"]},{"settings_type":"sent_order_item_columns","settings_value":["name","sent_quantity","delivered_quantity","active","supplier_item_code","supplier_item_description","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","wh_additional_1","wh_additional_2","wh_additional_3","movers","dimension","weight","volume","sum","sum_in_suppliers_currency","purchase_price","purchase_price_in_suppliers_currency","sale_price","usq","moq","order_quantity","quantity_in_suppliers_dimension","order_id","order_creation_date","company_name","warehouse_name","address","date","supplier_name","currency","author","buffer","balance","safety_buffer","order_split_mark","item_notes"]},{"settings_type":"applied_buffers_changes_filters","settings_value":{"fid":"6b0551b9-7bdb-46ab-8bbd-dd1e9b3990bc","table":"buffers_changes","filters":[{"value":"","compare":"≠","column_name":"wp_split_mark"}]}},{"settings_type":"sent_order_items_columns_width","settings_value":{"actions":"68","sku":"55","name":"342","sent_quantity":"155","delivered_quantity":"153","active":"69","supplier_item_code":"143","supplier_item_description":"175","additional_1":"181","additional_2":"132","additional_3":"167","additional_4":"251","additional_5":"97","additional_6":"342","additional_7":"78","additional_8":"111","additional_9":"118","wh_additional_1":"94","wh_additional_2":"106","wh_additional_3":"100","movers":"56","dimension":"90","weight":"62","volume":"62","sum":"76","sum_in_suppliers_currency":"169","purchase_price":"90","purchase_price_in_suppliers_currency":"206","sale_price":"94","usq":"42","moq":"44","order_quantity":"49","quantity_in_suppliers_dimension":"228","buffer":"55","balance":"60","safety_buffer":"126","order_split_mark":"71","item_notes":"74"}},{"settings_type":"buffers_changes_columns_width","settings_value":{"use":"158","actions":"62","trend":"49","buffer":"52","recommended":"77","new_buffer":"76","sku":"55","buffer_change_reason_id":"0","level":"62"}},{"settings_type":"applied_items_filters","settings_value":{"fid":"66ad41fa-8ec3-4d5a-ba69-4d83bc071022","table":"items","filters":[{"value":true,"compare":"=","column_name":"product_out"}]}}]};
+});
+
+
+</script>
+
+
+
+<div></div></body></html>
