@@ -1,0 +1,594 @@
+<html lang="ru" ng-app="panel-california" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>
+Редактировать поставщика Central Supplier - Панель Калифорния
+</title>
+<link rel="stylesheet" media="all" href="http://staging.abmcloud.us/assets/application_new-10bbc45c0a16e679a1bd6b5f75636f38.css">
+    <link href="style/style.css" media="all" rel="stylesheet">
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="1RlJpQvxk+LNT7Af9WH3gOkPwSt3u2VjNEaKNc86wm+3nvz8z6nt3fh+FfLsWmQ2c1D4i1bx6hwi5Uq60odWgw==">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
+</head>
+<body class="page-panel-suppliers page-panel-suppliers-edit" id="app">
+<div class="main-wrapper">
+<div class="logout-panel">
+<div class="item-log-panel">
+<i class="fa fa-user" style="font-size: 41px"></i>
+</div>
+<div class="item-log-panel user-info">
+<div class="dropdown">
+<a class="visible-item" data-toggle="dropdown" href="#">
+<span class="txt">
+Super Admin
+<span class="famfamfam-flag-ru" title="ru"></span>
+</span>
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=tstcmp&amp;locale=en"><span class="famfamfam-flag-en" title="en"></span>
+Английский
+</a></li>
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=tstcmp&amp;locale=ru"><span class="famfamfam-flag-ru" title="ru"></span>
+Русский
+</a></li>
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=tstcmp&amp;locale=uk"><span class="famfamfam-flag-uk" title="uk"></span>
+Украинский
+</a></li>
+</ul>
+</div>
+</div>
+<div class="item-log-panel wrap-out pull-right">
+<a id="logout-link" title="Выйти" href="/logout?company_id=tstcmp"><i class="fa fa-power-off"></i>
+</a></div>
+</div>
+<div class="left-panel">
+<span class="handle">
+<span class="icon icon-handle-left"></span>
+</span>
+<div class="head-logo">
+<a href="/tstcmp"><img class="img-responsive" src="/assets/logo-78a034839f5625890f7d290ff9c71916.png" alt="Logo">
+</a><div class="sub-logo">
+Test Company
+</div>
+</div>
+<ul class="menu" id="main-nav">
+<li class=""><a class="first-level" href="/admin/companies"><i class="fa fa-mail-reply"></i><span><span class="translation_missing" title="translation missing: ru.application.left_panel.back_to_admin">Back To Admin</span></span></a></li>
+<li class="active"><a class="first-level open" href="#"><i class="fa fa-folder-open"></i><span>Каталоги</span><i class="fa fa-angle-right"></i></a><ul class="open"><li class=""><a href="/tstcmp/catalogs/products">Товары</a></li>
+<li class=""><a href="/tstcmp/catalogs/dimensions">Ед.измерения</a></li>
+<li class=""><a href="/tstcmp/panel/supplier_dimensions">Ед.измерения поставщика</a></li>
+<li class="active"><a href="/tstcmp/panel/suppliers">Поставщики</a></li>
+<li class=""><a href="/tstcmp/catalogs/order_split_marks">Признаки разделения</a></li>
+<li class=""><a href="/tstcmp/panel/currencies">Валюта</a></li>
+<li class=""><a href="/tstcmp/panel/periods">Периоды</a></li>
+<li class=""><a href="/tstcmp/panel/reasons">Причины</a></li>
+</ul></li><li class=""><a class="first-level" href="#"><i class="fa"><img width="30" src="ui_buffer.png" alt="Icon buffer"></i><span>Буферы</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/tstcmp/panel/buffers_new_items">Буферы новых товаров</a></li>
+<li class=""><a href="/tstcmp/panel/buffers">Управление буферами</a></li>
+<li class=""><a href="/tstcmp/panel/buffers_changes">Изменение буфера</a></li>
+</ul></li><li class=""><a class="first-level" href="/tstcmp/panel/inventories"><i class="fa fa-cubes"></i><span>Запасы</span></a></li>
+<li class=""><a class="first-level" href="#"><i class="fa fa-shopping-cart"></i><span>Заказы</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/tstcmp/panel/order_templates/new">Создать заказ</a></li>
+<li class=""><a href="/tstcmp/panel/orders">Новые заказы</a></li>
+<li class=""><a href="/tstcmp/panel/placed_orders">Отправленные заказы</a></li>
+<li class=""><a href="/tstcmp/panel/sent_orders">История отправленных заказов</a></li>
+<li class=""><a href="/tstcmp/panel/supply_schedules">Графики поставок</a></li>
+</ul></li><li class=""><a class="first-level" href="#"><i class="fa fa-cog"></i><span>Администрирование</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/tstcmp/panel/users">Пользователи</a></li>
+<li class=""><a href="/tstcmp/panel/roles">Роли пользователя</a></li>
+<li class=""><a href="/tstcmp/panel/warehouses">Склады</a></li>
+<li class=""><a href="/tstcmp/panel/warehouses/users">Склады пользователя</a></li>
+<li class=""><a href="/tstcmp/panel/reports/recipients">Отчеты</a></li>
+<li class=""><a href="/tstcmp/panel/import_excel_files">Импортировать</a></li>
+<li class=""><a href="/tstcmp/panel/manual_exchanges">Обмен</a></li>
+<li class=""><a href="/tstcmp/panel/logs/dbm">Журнал</a></li>
+</ul></li><li class=""><a class="first-level" href="/tstcmp/panel/system_warnings"><i class="fa fa-exclamation-triangle"></i><span>Системные ошибки</span></a></li>
+</ul>
+</div>
+
+<div class="container-fluid work-area">
+<!--Переместил заголовок в ранель-->
+<div class="row" id="alerts-area">
+
+</div>
+<div class="progress-wrapper">
+<div class="inner text-center">
+<div class="fa-stack fa-lg">
+<i class="fa fa-cloud-download fa-stack-2x"></i>
+</div>
+<h3 class="m-t m-b" data-default-text="Загрузка...">
+Загрузка...
+</h3>
+<div class="progress progress-xs">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar progress-bar-striped active" style="width: 100%"></div>
+</div>
+</div>
+</div>
+
+<!-- .bg-light.lter.b-b.wrapper-md -->
+<!-- %h1.m-n.font-thin.h3 -->
+<!-- .row -->
+<!-- .col-lg-8 -->
+<!-- = yield :page_title -->
+<!-- .col-lg-4 -->
+<!-- .pull-right -->
+
+<div class="panel panel-default block">
+<div class="panel-heading font-bold">
+    <div class="row page-title">
+<div class="btn-left-menu btn-left-menu-js">
+<i class="fa fa-navicon"></i>
+</div>
+        <span>Карточка поставщика</span>
+<h1 class="">
+Редактировать поставщика Central Supplier
+</h1>
+</div>
+<ul class="nav nav-tabs" id="supplier-tabs" role="tablist">
+<li role="presentation" class="active">
+<a role="tab" data-toggle="tab" aria-controls="general_data" href="/tstcmp/panel/suppliers/15/edit#general_data">Общая информация</a>
+</li>
+<li role="presentation" class="">
+<a role="tab" data-toggle="tab" aria-controls="order_data" href="/tstcmp/panel/suppliers/15/edit#order_data">Информация о заказе</a>
+</li>
+<li role="presentation" class="">
+<a role="tab" data-toggle="tab" aria-controls="mail_orders" href="/tstcmp/panel/suppliers/15/edit#mail_orders">Отправить заказ</a>
+</li>
+<li>
+<a href="/tstcmp/panel/suppliers/15/order_schedules">График заказов</a>
+</li>
+<li>
+<a role="tab" data-toggle="tab" aria-controls="optimization" href="/tstcmp/panel/suppliers/15/edit#optimization">Оптимизация</a>
+</li>
+</ul>
+
+</div>
+<div class="panel-body ng-scope" ng-controller="SupplierEditCtrl" ng-init="loadFormData({&quot;id&quot;:15,&quot;name&quot;:&quot;Central Supplier&quot;,&quot;code&quot;:&quot;3543&quot;,&quot;address&quot;:&quot;&quot;,&quot;phone&quot;:&quot;&quot;,&quot;fax&quot;:&quot;&quot;,&quot;contact_person&quot;:&quot;&quot;,&quot;report_period&quot;:null,&quot;report_email_recipient&quot;:&quot;&quot;,&quot;active&quot;:true,&quot;buffer_increase&quot;:false,&quot;buffer_decrease&quot;:false,&quot;deleted&quot;:false,&quot;created_by_id&quot;:2,&quot;updated_by_id&quot;:20,&quot;created_at&quot;:&quot;2015-12-16T13:45:43.785Z&quot;,&quot;updated_at&quot;:&quot;2015-12-23T10:37:46.002Z&quot;,&quot;order_responsible_person_id&quot;:20,&quot;order_notes&quot;:&quot;&quot;,&quot;order_partial_delivery&quot;:false,&quot;order_partial_delivery_value&quot;:100,&quot;order_split_by_mark&quot;:false,&quot;order_split_by_manager&quot;:false,&quot;currency_id&quot;:2,&quot;currency_rate&quot;:null,&quot;currency_manual_input&quot;:false,&quot;warehouse_id&quot;:null,&quot;by_main_email&quot;:false,&quot;by_scheduler_email&quot;:false,&quot;mail_content&quot;:&quot;&quot;,&quot;ddp_email_recipients&quot;:null,&quot;report_locale&quot;:&quot;uk&quot;,&quot;supplier_optimizes&quot;:[{&quot;id&quot;:14,&quot;supplier_id&quot;:15,&quot;warehouse_id&quot;:null,&quot;order_split_mark_id&quot;:null,&quot;optimization&quot;:false,&quot;minimum_sum&quot;:0,&quot;minimum_paletts_count&quot;:0,&quot;minimum_weight&quot;:100,&quot;optimization_threshold&quot;:0,&quot;optimization_minimum_sum&quot;:0,&quot;order_split_by_transport&quot;:false,&quot;order_partial_transport_value&quot;:null,&quot;order_partial_transport_type&quot;:&quot;weight&quot;,&quot;created_at&quot;:&quot;2015-12-16T13:45:43.787Z&quot;,&quot;updated_at&quot;:&quot;2015-12-17T12:21:34.752Z&quot;}]})">
+<form id="supplier-form-edit" name="supplierForm" class="simple_form form-horizontal ng-pristine ng-valid ng-valid-required" ng-submit="submitForm($event)" novalidate="novalidate" action="/tstcmp/panel/suppliers/15" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="1RlJpQvxk+LNT7Af9WH3gOkPwSt3u2VjNEaKNc86wm+3nvz8z6nt3fh+FfLsWmQ2c1D4i1bx6hwi5Uq60odWgw=="><div class="tab-content">
+<div class="tab-pane active" id="general_data" role="tabpanel">
+<div class="form-group underline">
+<label class="col-xs-3 text-right">
+Активный
+</label>
+<div class="col-xs-9 vertical-cent">
+
+    <label class=" ">
+<input name="supplier[active]" type="hidden" value="0">
+
+    <input class="checkbox-nice" label="false" type="checkbox" value="1" checked="checked" name="supplier[active]" id="supplier_active">
+</label>
+</div>
+</div>
+<div ng-class="{ 'has-error': supplierForm['supplier[code]'].$invalid &amp;&amp; submitted }" class="form-group underline vertical-cent string required supplier_code"><label class="string required col-sm-3 control-label" for="supplier_code"><abbr title="required">*</abbr> Код поставщика</label><div class="col-sm-9"><input ng-model="form['code']" class="string required form-control ng-pristine ng-untouched ng-valid" placeholder="Введите код поставщика" type="text" value="3543" name="supplier[code]" id="supplier_code">
+<!--Спаны дя подчеркивания-->
+    <span></span></div></div>
+<div ng-class="{ 'has-error': supplierForm['supplier[name]'].$invalid &amp;&amp; submitted }" class="form-group underline vertical-cent string required supplier_name"><label class="string required col-sm-3 control-label" for="supplier_name"><abbr title="required">*</abbr> Название поставщика</label><div class="col-sm-9"><input ng-model="form['name']" required="required" class="string required form-control ng-pristine ng-untouched ng-valid ng-valid-required" placeholder="Введите название" type="text" value="Central Supplier" name="supplier[name]" id="supplier_name"><span></span></div></div>
+<div class="form-group underline vertical-cent string optional supplier_address"><label class="string optional col-sm-3 control-label" for="supplier_address">Адрес поставщика</label><div class="col-sm-9"><input class="string optional form-control" placeholder="Введите адрес поставщика" type="text" value="" name="supplier[address]" id="supplier_address"><span></span></div></div>
+<div class="form-group underline vertical-cent tel optional supplier_phone"><label class="tel optional col-sm-3 control-label" for="supplier_phone">Телефон поставщика</label><div class="col-sm-9"><input class="string tel optional form-control" placeholder="Введите телефон" type="tel" value="" name="supplier[phone]" id="supplier_phone"><span></span></div></div>
+<div class="form-group underline vertical-cent string optional supplier_fax"><label class="string optional col-sm-3 control-label" for="supplier_fax">Факс поставщика</label><div class="col-sm-9"><input class="string optional form-control" placeholder="Факс" type="text" value="" name="supplier[fax]" id="supplier_fax"><span></span></div></div>
+<div class="form-group underline vertical-cent string optional supplier_contact_person"><label class="string optional col-sm-3 control-label" for="supplier_contact_person">Контактное лицо поставщика</label><div class="col-sm-9"><input class="string optional form-control" placeholder="Введите контактное лицо" type="text" value="" name="supplier[contact_person]" id="supplier_contact_person"><span></span></div></div>
+
+
+<!--Сменил класс col-sm-9-->
+    <div class="form-group underline vertical-cent select optional supplier_warehouse_id"><label class="select optional col-sm-3 control-label" for="supplier_warehouse_id">Склад поставщика в цепи поставок</label>
+        <div class="col-sm-3">
+            <select class="select optional form-control" name="supplier[warehouse_id]" id="supplier_warehouse_id"><option value=""></option>
+        <option value="3">Склад #2</option>
+        <option value="4">Склад #3</option>
+        <option value="5">Склад #4</option>
+        <option value="6">Склад #5</option>
+        <option value="7">Склад #7</option>
+        <option value="8">Склад #8</option>
+        <option value="9">Склад #11</option>
+        <option value="10">Склад #12</option>
+        <option value="11">Склад #14</option>
+        <option value="12">Склад #18</option>
+        <option value="13">Склад #19</option>
+        <option value="14">Склад #20</option>
+        <option value="15">Склад #21</option>
+        <option value="16">Склад #22</option>
+        <option value="17">Склад #23</option>
+        <option value="18">Склад #24</option>
+        <option value="19">Склад #25</option>
+        <option value="20">Склад #26</option>
+        <option value="21">Склад #27</option>
+        <option value="2">Склад #1</option>
+        <option disabled="disabled" value="1">Test</option></select></div></div>
+<div class="form-group underline vertical-cent select optional supplier_report_period"><label class="select optional col-sm-3 control-label" for="supplier_report_period">DDP отчет за период</label><div class="col-sm-3"><select class="select optional form-control" name="supplier[report_period]" id="supplier_report_period"><option value=""></option>
+<option value="3_months">3 месяца</option>
+<option value="12_months">12 месяцев</option>
+<option value="3_and_12_months">3 и 12 месяцев</option></select></div></div>
+<div class="form-group select optional supplier_report_locale"><label class="select optional col-sm-3 control-label" for="supplier_report_locale">Язык DDP отчета</label><div class="col-sm-3"><select class="select optional form-control" name="supplier[report_locale]" id="supplier_report_locale"><option value="en">Английский</option>
+<option value="ru">Русский</option>
+<option selected="selected" value="uk">Украинский</option></select></div></div>
+<div class="form-group underline vertical-cent email optional supplier_ddp_email_recipients"><label class="email optional col-sm-3 control-label" for="supplier_ddp_email_recipients">Получатели DDP отчета поставщика</label><div class="col-sm-9"><input class="string email optional form-control" placeholder="Введите почту" type="email" name="supplier[ddp_email_recipients]" id="supplier_ddp_email_recipients" disabled="disabled"></div></div>
+<div class="form-group vertical-cent">
+<label class="col-xs-3 text-right">
+Автоматическое изменение буферов
+</label>
+<div class="col-xs-9">
+<div class="row vertical-cent">
+<div class="col-xs-12">
+<label class="">
+<input name="supplier[buffer_increase]" type="hidden" value="0"><input  class="checkbox-nice" label="false" type="checkbox" value="1" name="supplier[buffer_increase]" id="supplier_buffer_increase">
+Увеличение
+</label>
+<label class="">
+<input name="supplier[buffer_decrease]" type="hidden" value="0">
+    <input class="checkbox-nice" label="false" type="checkbox" value="1" name="supplier[buffer_decrease]" id="supplier_buffer_decrease">
+Уменьшение
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-pane" id="order_data" role="tabpanel">
+<div class="form-group underline vertical-cent select optional supplier_order_responsible_person"><label class="select optional col-sm-3 control-label" for="supplier_order_responsible_person_id">Ответственное лицо</label><div class="col-sm-5"><select class="select optional form-control" name="supplier[order_responsible_person_id]" id="supplier_order_responsible_person_id"><option value=""></option>
+<option selected="selected" value="20">Абдула Мармеладов</option>
+<option value="22">1 2</option>
+<option value="3">Test_user_#1 QA</option></select></div></div>
+<div class="form-group underline vertical-cent string optional supplier_order_notes"><label class="string optional col-sm-3 control-label" for="supplier_order_notes">Примечания в окне заказа</label><div class="col-sm-9"><input class="string optional form-control" placeholder="Введите примечания к заказу" type="text" value="" name="supplier[order_notes]" id="supplier_order_notes"><span></span></div></div>
+<div class="form-group underline vertical-cent">
+<div class="col-sm-4 text-right">
+<label class="checkbox-inline i-checks"></label>
+<label class="">
+<input name="supplier[order_partial_delivery]" type="hidden" value="0"><input label="false" class='checkbox-nice' type="checkbox" value="1" name="supplier[order_partial_delivery]" id="supplier_order_partial_delivery">
+<i></i>
+Заказ доставляется частями
+</label>
+</div>
+<div class="col-sm-3">
+<input class="form-control" type="number" min="1" max="100" value="100" name="supplier[order_partial_delivery_value]" id="supplier_order_partial_delivery_value"><span></span>
+</div>
+</div>
+<div class="form-group underline vertical-cent">
+<div class="col-sm-12 col-sm-offset-3">
+<label class="">
+<input name="supplier[order_split_by_mark]" type="hidden" value="0"><input class="checkbox-nice" label="false" type="checkbox" value="1" name="supplier[order_split_by_mark]" id="supplier_order_split_by_mark">
+Разделение заказов по признаку разделения
+</label>
+<!-- Удалил класс label добавил -->
+    <label class="">
+<input name="supplier[order_split_by_manager]" type="hidden" value="0">
+
+
+    <input class="checkbox-nice" label="false" type="checkbox" value="1" name="supplier[order_split_by_manager]" id="supplier_order_split_by_manager">
+Разделение заказов по менеджеру
+</label>
+</div>
+</div>
+<div class="form-group underline vertical-cent">
+<div class="col-lg-6 col-lg-offset-3 col-sm-4">
+<div class="form-group select optional supplier_currency"><label class="select optional col-sm-3 control-label" for="supplier_currency_id">Валюта</label><div class="col-sm-9"><select class="select optional form-control" name="supplier[currency_id]" id="supplier_currency_id"><option selected="selected" value="2">Hryvnia</option>
+<option value="1">US Dollar</option></select></div></div>
+</div>
+<div class="col-lg-3 col-sm-2">
+<div class="form-group boolean optional supplier_currency_manual_input"><div class="col-sm-offset-3 col-sm-9"><div class="checkbox"><input value="0" type="hidden" name="supplier[currency_manual_input]"><label class="boolean optional " for="supplier_currency_manual_input"><input class="boolean optional col-sm-9" type="checkbox" value="1" name="supplier[currency_manual_input]" id="supplier_currency_manual_input">Ввод вручную</label></div></div></div>
+</div>
+<div class="col-lg-3 col-sm-4">
+<div class="form-group decimal optional disabled supplier_currency_rate"><label class="decimal optional col-sm-6 control-label" for="supplier_currency_rate">Курс валют</label><div class="col-sm-6"><input class="numeric decimal optional disabled form-control" disabled="disabled" type="number" step="any" name="supplier[currency_rate]" id="supplier_currency_rate"><span></span></div></div>
+</div>
+<div data-base_currency="{&quot;id&quot;:2,&quot;currency_id&quot;:3,&quot;course_date&quot;:&quot;2015-12-17&quot;,&quot;rate&quot;:&quot;1.0&quot;,&quot;manual_input&quot;:true,&quot;created_at&quot;:&quot;2015-12-17T09:20:30.071Z&quot;,&quot;updated_at&quot;:&quot;2015-12-17T09:30:08.248Z&quot;}" id="company-base-currency-data" style="display: none;"></div>
+</div>
+</div>
+
+<div class="tab-pane" id="mail_orders" role="tabpanel">
+<div class="form-group underline vertical-cent email optional supplier_report_email_recipient"><label class="email optional col-sm-3 control-label" for="supplier_report_email_recipient">Основной получатель</label><div class="col-sm-9"><input class="string email optional form-control" placeholder="Введите почту" type="email" value="" name="supplier[report_email_recipient]" id="supplier_report_email_recipient"><span></span></div></div>
+<div class="form-group underline">
+<label class="col-sm-3 control-label" for="________________________">Почта получателя заказов</label>
+<div class="col-sm-4">
+<div class="form-group boolean optional supplier_by_main_email"><div class="col-sm-12"><div class="checkbox"><input value="0" type="hidden" name="supplier[by_main_email]"><label class="boolean optional " for="supplier_by_main_email"><input class="boolean optional col-sm-9" type="checkbox" value="1" name="supplier[by_main_email]" id="supplier_by_main_email">основной пользователь</label></div></div></div>
+</div>
+<div class="col-sm-4">
+<div class="form-group boolean optional supplier_by_scheduler_email"><div class="col-sm-12"><div class="checkbox"><input value="0" type="hidden" name="supplier[by_scheduler_email]"><label class="boolean optional " for="supplier_by_scheduler_email"><input class="boolean optional col-sm-9" type="checkbox" value="1" name="supplier[by_scheduler_email]" id="supplier_by_scheduler_email">данный пользователь</label></div></div></div>
+</div>
+</div>
+<div class="form-group underline">
+<div class="form-group text optional supplier_mail_content"><label class="text optional col-sm-3 control-label" for="supplier_mail_content">Mail content</label><div class="col-sm-9"><textarea cols="40" rows="15" class="text optional form-control" name="supplier[mail_content]" id="supplier_mail_content"></textarea></div></div>
+</div>
+</div>
+
+<div class="tab-pane" id="optimization" role="tabpanel">
+<div class="modal fade" id="new-optimaze">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<div class="row">
+<div class="col-xs-10">
+<h4>Добавление оптимизации</h4>
+</div>
+<div class="col-xs-2">
+<button class="btn btn-primary pull-right" data-dismiss="modal" type="button">
+Закрыть
+</button>
+</div>
+</div>
+</div>
+<div class="modal-body">
+<div class="row">
+
+<div class="form-group underline vertical-cent pad-bot-5">
+<label class="col-xs-4 text-right">Склад</label>
+<div class="col-xs-8">
+<select class="selectpicker bs-select-hidden ng-pristine ng-untouched ng-valid" ng-model="new_optimize['warehouse_id']" style="display: none;">
+<!-- ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="1" class="ng-binding ng-scope">
+Test
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="10" class="ng-binding ng-scope">
+Склад #12
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="11" class="ng-binding ng-scope">
+Склад #14
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="12" class="ng-binding ng-scope">
+Склад #18
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="13" class="ng-binding ng-scope">
+Склад #19
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="14" class="ng-binding ng-scope">
+Склад #20
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="15" class="ng-binding ng-scope">
+Склад #21
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="16" class="ng-binding ng-scope">
+Склад #22
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="17" class="ng-binding ng-scope">
+Склад #23
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="18" class="ng-binding ng-scope">
+Склад #24
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="19" class="ng-binding ng-scope">
+Склад #25
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="2" class="ng-binding ng-scope">
+Склад #1
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="20" class="ng-binding ng-scope">
+Склад #26
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="21" class="ng-binding ng-scope">
+Склад #27
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="3" class="ng-binding ng-scope">
+Склад #2
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="4" class="ng-binding ng-scope">
+Склад #3
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="5" class="ng-binding ng-scope">
+Склад #4
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="6" class="ng-binding ng-scope">
+Склад #5
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="7" class="ng-binding ng-scope">
+Склад #7
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="8" class="ng-binding ng-scope">
+Склад #8
+</option><!-- end ngRepeat: (key, warehouse) in warehouses --><option ng-repeat="(key, warehouse) in warehouses" value="9" class="ng-binding ng-scope">
+Склад #11
+</option><!-- end ngRepeat: (key, warehouse) in warehouses -->
+</select><div class="btn-group bootstrap-select bs-select-hidden ng-pristine ng-untouched ng-valid"><button type="button" class="btn dropdown-toggle form-control selectpicker btn-default" data-toggle="dropdown" title="Nothing selected"><span class="filter-option pull-left">Nothing selected</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;></span>"><span class="text"></span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+</div>
+</div>
+<div class="form-group underline vertical-cent pad-bot-5">
+<label class="col-xs-4 text-right">Признак разделения</label>
+<div class="col-xs-8">
+<select class="selectpicker bs-select-hidden ng-pristine ng-untouched ng-valid" ng-model="new_optimize['order_split_mark_id']" style="display: none;"><option value="? object:null ?"></option>
+<!-- ngRepeat: (key, order_split_mark) in order_split_marks --><option ng-repeat="(key, order_split_mark) in order_split_marks" value="1" class="ng-binding ng-scope">
+UniversalSplitMark
+</option><!-- end ngRepeat: (key, order_split_mark) in order_split_marks --><option ng-repeat="(key, order_split_mark) in order_split_marks" value="2" class="ng-binding ng-scope">
+DionisSplitMark
+</option><!-- end ngRepeat: (key, order_split_mark) in order_split_marks --><option ng-repeat="(key, order_split_mark) in order_split_marks" value="3" class="ng-binding ng-scope">
+ZaporSplitMark
+</option><!-- end ngRepeat: (key, order_split_mark) in order_split_marks -->
+</select><div class="btn-group bootstrap-select bs-select-hidden ng-pristine ng-untouched ng-valid"><button type="button" class="btn dropdown-toggle form-control selectpicker btn-default" data-toggle="dropdown" title="Nothing selected"><span class="filter-option pull-left">Nothing selected</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;></span>"><span class="text"></span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="modal-footer">
+<div class="row">
+<div class="col-xs-12">
+<button class="btn btn-primary pull-right" data-dismiss="modal" id="save_new_optimize" ng-click="createOptimize()" type="button">
+Сохранить
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrap-optimizate block-tab-shadow">
+<div class="row">
+<div class="col-xs-3 col-nav">
+<ul class="nav nav-tabs">
+<!-- ngRepeat: optimize in form.supplier_optimizes --><li ng-class="{ 'active': optimize['active'] }" ng-repeat="optimize in form.supplier_optimizes" class="ng-scope active">
+<a data-toggle="tab" href="#" ng-click="activeOptimize(optimize['warehouse_id'], optimize['order_split_mark_id'])">
+<p class="name ng-binding">Общие настройки</p>
+<p class="descript ng-binding">Все склады, все признаки разделения</p>
+</a>
+</li><!-- end ngRepeat: optimize in form.supplier_optimizes -->
+</ul>
+<div class="wrap-btn-nav">
+<div class="row">
+<div class="col-xs-12 col-lg-6 col-left-btn" ng-show="warehousesLength() > 0">
+<button class="btn btn-success" data-target="#new-optimaze" data-toggle="modal" id="add_optimize" type="button">
+<i class="fa fa-times-circle-o" data-original-title="" title="">
+Добавить
+</i>
+</button>
+</div>
+<div class="col-xs-12 col-lg-6 col-right-btn ng-hide" ng-show="optimizesLength() > 1 &amp;&amp; !isCurrentDefaultOption()">
+<button class="btn btn-danger" ng-click="removeCurrentOptimize()" type="button">
+<i class="fa fa-trash" data-original-title="" title="">
+Удалить
+</i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ngRepeat: optimize in form.supplier_optimizes --><div class="col-xs-9 ng-scope" ng-repeat="optimize in form.supplier_optimizes" on-finish-render="ngRepeatFinished">
+<div class="tab-content">
+<div class="tab-pane fade in active" ng-class="optimize['active'] ? 'active' : ''">
+<div class="form-horizontal ng-binding">
+
+<input name="supplier[supplier_optimizes_attributes][1][id]" ng-value="optimize['id']" type="hidden" value="14">
+<input name="supplier[supplier_optimizes_attributes][1][warehouse_id]" ng-value="optimize['warehouse_id']" type="hidden">
+<input name="supplier[supplier_optimizes_attributes][1][order_split_mark_id]" ng-value="optimize['order_split_mark_id']" type="hidden">
+<div class="form-group underline">
+<div class="col-xs-12">
+<label class=" radio-js radio mrg-right-0 mrg-top-0">
+<input data-ng-model="optimize['optimization']" data-ng-value="false" name="supplier[supplier_optimizes_attributes][1][optimization]" type="radio" class="ng-pristine ng-untouched ng-valid" value="false">
+Без оптимизации. Условия автоотправки
+</label>
+</div>
+<div class="col-xs-12 small-form">
+<div class="row vertical-cent" ng-class="{ 'has-error': !validOptimizeField(optimize, 'minimum_sum') &amp;&amp; submitted }">
+<label class="col-xs-offset-1 col-xs-3">Минимальная сумма</label>
+<div class="col-xs-3 col-sm-2">
+<input class="form-control mrg-right-25 text-right numeric ng-pristine ng-untouched ng-valid" name="supplier[supplier_optimizes_attributes][1][minimum_sum]" ng-model="optimize['minimum_sum']" type="text">
+</div>
+<div class="col-xs-1 pad-left-0">
+EUR
+</div>
+</div>
+<div class="row vertical-cent" ng-class="{ 'has-error': !validOptimizeField(optimize, 'minimum_paletts_count') &amp;&amp; submitted }">
+<label class="col-xs-offset-1 col-xs-3">Минимум палет</label>
+<div class="col-xs-3 col-sm-2">
+<input class="form-control mrg-right-25 text-right numeric ng-pristine ng-untouched ng-valid" name="supplier[supplier_optimizes_attributes][1][minimum_paletts_count]" ng-model="optimize['minimum_paletts_count']" type="text">
+</div>
+<div class="col-xs-1 pad-left-0">
+шт
+</div>
+</div>
+<div class="row vertical-cent" ng-class="{ 'has-error': !validOptimizeField(optimize, 'minimum_weight') &amp;&amp; submitted }">
+<label class="col-xs-offset-1 col-xs-3">Минимальный вес</label>
+<div class="col-xs-3 col-sm-2">
+<input class="form-control mrg-right-25 text-right numeric ng-pristine ng-untouched ng-valid" name="supplier[supplier_optimizes_attributes][1][minimum_weight]" ng-model="optimize['minimum_weight']" type="text">
+</div>
+<div class="col-xs-1 pad-left-0">
+кг
+</div>
+</div>
+</div>
+</div>
+<div class="form-group underline">
+<div class="col-xs-12">
+<label class=" radio-js radio mrg-right-0 mrg-top-0">
+<input data-ng-model="optimize['optimization']" data-ng-value="true" name="supplier[supplier_optimizes_attributes][1][optimization]" type="radio" class="ng-pristine ng-untouched ng-valid" value="true">
+Оптимизация по сумме
+</label>
+</div>
+<div class="col-xs-12 small-form">
+<div class="row vertical-cent" ng-class="{ 'has-error': !validOptimizeField(optimize, 'optimization_threshold') &amp;&amp; submitted }">
+<label class="col-xs-offset-1 col-xs-3">Пороговое значение</label>
+<div class="col-xs-3 col-sm-2">
+<input class="form-control mrg-right-25 text-right numeric ng-pristine ng-untouched ng-valid" name="supplier[supplier_optimizes_attributes][1][optimization_threshold]" ng-model="optimize['optimization_threshold']" type="text">
+</div>
+<div class="col-xs-1 pad-left-0">
+EUR
+</div>
+</div>
+<div class="row vertical-cent" ng-class="{ 'has-error': !validOptimizeField(optimize, 'optimization_minimum_sum') &amp;&amp; submitted }">
+<label class="col-xs-offset-1 col-xs-3">Минимум</label>
+<div class="col-xs-3 col-sm-2">
+<input class="form-control mrg-right-25 text-right numeric ng-pristine ng-untouched ng-valid" name="supplier[supplier_optimizes_attributes][1][optimization_minimum_sum]" ng-model="optimize['optimization_minimum_sum']" type="text">
+</div>
+<div class="col-xs-1 pad-left-0">
+EUR
+</div>
+</div>
+</div>
+</div>
+<div class="form-group underline vertical-cent">
+<div class="col-xs-4">
+<label class=" check-js mrg-right-0 mrg-top-0">
+<input class="checkbox-nice" name="supplier[supplier_optimizes_attributes][1][order_split_by_transport]" ng-model="optimize['order_split_by_transport']" type="checkbox" class="ng-pristine ng-untouched ng-valid">
+Разделение заказа по транспорту
+</label>
+</div>
+<div class="col-xs-3 col-sm-2" ng-class="{ 'has-error': !validOptimizeField(optimize, 'order_partial_transport_value') &amp;&amp; submitted }">
+<input class="form-control mrg-right-25 text-right numeric ng-pristine ng-untouched ng-valid" name="supplier[supplier_optimizes_attributes][1][order_partial_transport_value]" ng-model="optimize['order_partial_transport_value']" type="text">
+</div>
+<div class="col-xs-4 col-sm-3 pad-left-0">
+<select class="selectpicker order-transport-type ng-pristine ng-untouched ng-valid" name="supplier[supplier_optimizes_attributes][1][order_partial_transport_type]" ng-model="optimize['order_partial_transport_type']" style="display: none;">
+<option value="weight">кг</option>
+<option value="volume">палет</option>
+</select><div class="btn-group bootstrap-select order-transport-type ng-pristine ng-untouched ng-valid"><button type="button" class="btn dropdown-toggle form-control selectpicker btn-default" data-toggle="dropdown" title="кг"><span class="filter-option pull-left">кг</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>кг</span>"><span class="text">кг</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>палет</span>"><span class="text">палет</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><!-- end ngRepeat: optimize in form.supplier_optimizes -->
+</div>
+</div>
+</div>
+
+</div></form>
+
+<br>
+<div class="col-xs-12 text-right">
+<!--Поменял местами Сохранить и отменить, убрал сохранить, добавил иконку-->
+    <a class="btn-danger btn" href="/tstcmp/panel/suppliers">Отменить</a>
+ <button name="tab_partial" type="submit" class="btn-primary btn" id="save_supplier" value="general_data" form="supplier-form-edit" autocomplete="off">
+     <i class="fa fa-save"></i>
+    </button>
+<button name="back" type="submit" class="btn-primary btn" value="1" form="supplier-form-edit" autocomplete="off">Сохранить и назад</button>
+
+</div>
+</div>
+</div>
+
+
+<footer class="page-foot">
+<div class="row">
+<div class="col-xs-12 vertical-cent">
+<p class="pull-left mrg-bot-0 mrg-left-40">© 2001-2016 ABM Cloud. Автоматизированная система управления запасами предприятия. Версия 1.8.2</p>
+</div>
+</div>
+</footer>
+
+</div>
+
+</div>
+<script src="http://staging.abmcloud.us/assets/application-744fa7223f334374a549b67f8a601008.js"></script>
+
+
+
+<script>
+//<![CDATA[
+Routes._defaults['company_id'] = 'tstcmp';
+//]]>
+</script><script>
+//<![CDATA[
+window.FAYE_URL = "http://staging.abmcloud.us:9292/faye";
+window.FAYE_KEY = "bebca1a30a151a69e2e94cd3d2d153ca";
+
+//]]>
+</script>
+<script>
+  I18n.defaultLocale = "en";
+  I18n.locale = "ru";
+  I18n.available_locales = "en,ru,uk";
+  I18n.missingPlaceholder = function(placeholder, message) {
+     return placeholder;
+  };
+</script>
+
+<script>
+angular.module('currentCompany', []).service('current_company', function(){
+    return {"name":"Test Company","id":1,"slug":"tstcmp"};
+});
+</script>
+
+<script>
+angular.module('currentUser', []).service('current_user', function(){
+    return {"id":1,"first_name":"Super","last_name":"Admin","user_settings":[{"settings_type":"buffer_columns_default","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","buffer_date","balance","bb_rate","btb_rate","in_transit"]},{"settings_type":"item_columns_default","settings_value":["name"]},{"settings_type":"applied_buffers_filters","settings_value":{"fid":"59b07e9d-3459-4ad1-8497-ff586b17d425","table":"buffers","filters":[{"value":"aaa","compare":"=","column_name":"wp_wh_additional1"}]}},{"settings_type":"item_columns","settings_value":["name","top","non","out","alt","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","additional_10","additional_11","additional_12","additional_13","additional_14","measure_1","measure_2"]},{"settings_type":"buffers_new_item_columns_default","settings_value":["name","active","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","buffer_date"]},{"settings_type":"order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"edit_regular_order_item_columns_default","settings_value":["quantity","name","movers","changes","btb_rate"]},{"settings_type":"add_order_item_columns_default","settings_value":["name","active","state","movers"]},{"settings_type":"sent_order_item_columns_default","settings_value":["name","sent_quantity","delivered_quantity","movers"]},{"settings_type":"sent_order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_columns","settings_value":["supplier","warehouse","order_split_mark","manager","supplier_code","warehouse_code","manager_code","delivery_date","total_sum","total_volume","total_weight","estimated_delivery_date","actual_delivery_date","notes","created_by","updated_by"]},{"settings_type":"edit_regular_order_item_columns","settings_value":["name","movers","changes","btb_rate","active","supplier_item_code","supplier_item_description","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","additional_10","additional_11","additional_12","additional_13","additional_14","wh_additional_1","wh_additional_2","wh_additional_3","wh_additional_4","dimension","weight","volume","free_amount","sum","sum_in_suppliers_currency","purchase_price","purchase_price_in_suppliers_currency","sale_price","usq","moq","order_quantity","order_limit","quantity_in_suppliers_dimension","order_id","order_creation_date","company_name","warehouse_name","address","date","supplier_name","currency","author","buffer","balance","safety_buffer","order_split_mark","item_notes"]},{"settings_type":"edit_special_order_item_columns_default","settings_value":["name","movers"]},{"settings_type":"placed_order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"edit_placed_order_item_columns_default","settings_value":["quantity","changes","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"inventory_columns_default","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","balance","in_transit","bb_rate","btb_rate"]},{"settings_type":"placed_order_columns","settings_value":["delivery_status","manager","order_split_mark","supplier","warehouse"]},{"settings_type":"placed_orders_columns_width","settings_value":{"actions":"83","type":"44","mark":"44","place_date":"90","order_no":"111","delivery_status":"95","manager":"63","order_split_mark":"71","supplier":"97","warehouse":"76"}},{"settings_type":"warehouse_product_columns_default","settings_value":["active","warehouse","supplier","manager","moq","balance","buffer","buffer_date","in_transit"]},{"settings_type":"orders_columns_width","settings_value":{"change":"74","actions":"57","type":"44","mark":"44","changed_by_manager":"47","creation_date":"90","supplier":"118","warehouse":"76","order_split_mark":"71","manager":"63","created_by":"76","updated_by":"62"}}]};
+});
+</script>
+
+
+
+<div></div></body></html>
