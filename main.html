@@ -1,0 +1,1077 @@
+<html lang="ru" ng-app="panel-california" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>
+Буферы : Буферы новых товаров - Панель Калифорния
+</title>
+<link rel="stylesheet" media="all" href="http://abmcloud.us/assets/application_new-d776d4023e12322aef62ceb3373af23d.css">
+
+ <link href="style/style.css" media="all" rel="stylesheet">
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="YFGvY3eA7umRCEdGUjPDl7YIPVtfAd+2tK4IrODRA2Ddawv9oVfmqx+DPkhG+LX1/gGhBoLffHbFut28uNd3FQ==">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
+</head>
+<body class="page-panel-buffers_new_items page-panel-buffers_new_items-index" id="app"><textarea style="position: absolute; width: 1px; height: 1px; overflow: hidden; color: transparent; bottom: 1px; right: 1px; border: none; background-color: transparent;"></textarea>
+<div class="main-wrapper">
+<div class="logout-panel">
+<div class="item-log-panel">
+<i class="fa fa-user" style="font-size: 41px"></i>
+</div>
+<div class="item-log-panel user-info">
+<div class="dropdown">
+<a class="visible-item" data-toggle="dropdown" href="#">
+<span class="txt">
+Super Admin
+<span class="famfamfam-flag-ru" title="ru"></span>
+</span>
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=test_delikat&amp;locale=en"><span class="famfamfam-flag-en" title="en"></span>
+Английский
+</a></li>
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=test_delikat&amp;locale=ru"><span class="famfamfam-flag-ru" title="ru"></span>
+Русский
+</a></li>
+<li>
+<a rel="nofollow" data-method="put" href="/profile/set_locale?company_id=test_delikat&amp;locale=uk"><span class="famfamfam-flag-uk" title="uk"></span>
+Украинский
+</a></li>
+</ul>
+</div>
+</div>
+<div class="item-log-panel wrap-out pull-right">
+<a id="logout-link" title="Выйти" href="/logout?company_id=test_delikat"><i class="fa fa-power-off"></i>
+</a></div>
+</div>
+<div class="left-panel">
+<span class="handle">
+<span class="icon icon-handle-left"></span>
+</span>
+<div class="head-logo">
+<a href="/test_delikat"><img class="img-responsive" src="/uploads/companies/logos/test_delikat/thumb_Delikat-TP.jpg" alt="Thumb delikat tp">
+</a><div class="sub-logo">
+Тестовый Деликат
+</div>
+</div>
+<ul class="menu" id="main-nav">
+<li class=""><a class="first-level" href="/admin/companies"><i class="fa fa-mail-reply"></i><span><span class="translation_missing" title="translation missing: ru.application.left_panel.back_to_admin">Back To Admin</span></span></a></li>
+<li class=""><a class="first-level" href="#"><i class="fa fa-folder-open"></i><span>Каталоги</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/test_delikat/catalogs/products">Товары</a></li>
+<li class=""><a href="/test_delikat/catalogs/dimensions">Ед.измерения</a></li>
+<li class=""><a href="/test_delikat/panel/supplier_dimensions">Ед.измерения поставщика</a></li>
+<li class=""><a href="/test_delikat/panel/suppliers">Поставщики</a></li>
+<li class=""><a href="/test_delikat/catalogs/order_split_marks">Признаки разделения</a></li>
+<li class=""><a href="/test_delikat/panel/currencies">Валюта</a></li>
+<li class=""><a href="/test_delikat/panel/periods">Периоды</a></li>
+<li class=""><a href="/test_delikat/panel/reasons">Причины</a></li>
+</ul></li><li class="active"><a class="first-level" href="#"><i class="fa"><img width="30" src="/assets/icon-buffer-9b7040c76965faad3a0e97658d191f11.svg" alt="Icon buffer"></i><span>Буферы</span><i class="fa fa-angle-right"></i></a><ul class="open"><li class=""><a href="/test_delikat/panel/buffers">Управление буферами</a></li>
+<li class="active"><a href="/test_delikat/panel/buffers_new_items">Буферы новых товаров</a></li>
+<li class=""><a href="/test_delikat/panel/buffers_changes">Изменение буфера</a></li>
+</ul></li><li class=""><a class="first-level" href="/test_delikat/panel/inventories"><i class="fa fa-cubes"></i><span>Запасы</span></a></li>
+<li class=""><a class="first-level" href="#"><i class="fa fa-shopping-cart"></i><span>Заказы</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/test_delikat/panel/order_templates/new">Создать заказ</a></li>
+<li class=""><a href="/test_delikat/panel/orders">Новые заказы</a></li>
+<li class=""><a href="/test_delikat/panel/placed_orders">Отправленные заказы</a></li>
+<li class=""><a href="/test_delikat/panel/sent_orders">История отправленных заказов</a></li>
+<li class=""><a href="/test_delikat/panel/supply_schedules">Графики поставок</a></li>
+</ul></li><li class=""><a class="first-level" href="#"><i class="fa fa-cog"></i><span>Настройка</span><i class="fa fa-angle-right"></i></a><ul class=""><li class=""><a href="/test_delikat/panel/users">Пользователи</a></li>
+<li class=""><a href="/test_delikat/panel/roles">Роли пользователя</a></li>
+<li class=""><a href="/test_delikat/panel/warehouses">Склады</a></li>
+<li class=""><a href="/test_delikat/panel/warehouses/users">Склады пользователя</a></li>
+<li class=""><a href="/test_delikat/panel/reports/recipients">Отчеты</a></li>
+<li class=""><a href="/test_delikat/panel/import_excel_files">Импортировать</a></li>
+<li class=""><a href="/test_delikat/panel/manual_exchanges">Обмен</a></li>
+<li class=""><a href="/test_delikat/panel/logs/dbm">Журнал</a></li>
+</ul></li><li class=""><a class="first-level" href="/test_delikat/panel/system_warnings"><i class="fa fa-exclamation-triangle"></i><span>Системные ошибки</span></a></li>
+</ul>
+</div>
+
+<div class="container-fluid work-area">
+
+<div class="row" id="alerts-area">
+
+</div>
+<div class="progress-wrapper">
+<div class="inner text-center">
+<div class="fa-stack fa-lg">
+<i class="fa fa-cloud-download fa-stack-2x"></i>
+</div>
+<h3 class="m-t m-b" data-default-text="Загрузка...">Загрузка...</h3>
+<div class="progress progress-xs">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar progress-bar-striped active" style="width: 100%"></div>
+</div>
+</div>
+</div>
+
+<!-- .bg-light.lter.b-b.wrapper-md -->
+<!-- %h1.m-n.font-thin.h3 -->
+<!-- .row -->
+<!-- .col-lg-8 -->
+<!-- = yield :page_title -->
+<!-- .col-lg-4 -->
+<!-- .pull-right -->
+
+<div class="row">
+<div class="wrap-buffer wrapper-md">
+<div class="panel panel-default panel-table">
+<div class="panel-heading">
+        <div class="row page-title">
+            <div class="btn-left-menu btn-left-menu-js">
+            <i class="fa fa-navicon"></i>
+            </div>
+            <h1 class="">
+            Буферы : Буферы новых товаров
+            </h1>
+    </div>
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+<form class="simple_form form-inline filter-form ng-pristine ng-valid" novalidate="novalidate" action="/test_delikat/panel/buffers_new_items" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="?"><button type="button" id="apply-changes-btn" class="btn-primary btn" disabled="" autocomplete="off">Изменить</button>
+<div class="form-group filter-option-input">
+<input name="by_sku" class="string optional form-control" placeholder="SKU" type="text" id="buffers_new_items_by_sku">
+</div>
+<div class="form-group filter-option-select">
+<select include_blank="true" name="by_warehouse" class="select optional form-control chosen-select" data-placeholder="Выберите склад" id="buffers_new_items_by_warehouse" style="display: none;"><option value=""></option>
+<option value="43">Д1</option>
+<option value="44">Д2</option>
+<option value="45">Д3</option>
+<option value="46">Д4</option>
+<option value="47">Д5</option>
+<option value="48">Д7</option></select>
+
+</div>
+<div class="form-group filter-option-select">
+<select include_blank="true" name="by_ass" class="select optional form-control chosen-select" data-placeholder="Выберите активность" id="buffers_new_items_by_ass" style="display: none;"><option value=""></option>
+<option value="1">Да</option>
+<option value="0">Нет</option></select>
+
+</div>
+<div class="form-group filter-option-select">
+<select include_blank="true" name="by_supplier" class="select optional form-control chosen-select" data-placeholder="Выберите поставщика" id="buffers_new_items_by_supplier" style="display: none;"><option value=""></option>
+<option value="4466">Бір-Майстер</option>
+<option value="4467">Торгпрод-2004</option>
+<option value="4469">Ромер С.М. ПП</option>
+<option value="4474">Марком СП</option>
+<option value="4857">Деликат Производство</option>
+<option value="4479">Щедро ТД</option>
+<option value="4921">Петренко</option>
+<option value="4481">Григорян Сурен конт №304-305</option>
+<option value="4483">Базар</option>
+<option value="4382">Санта-Україна ПП</option>
+<option value="4487">Петрус-Кондитер</option>
+<option value="4488">Вега-Торг</option>
+<option value="4489">Диск плюс</option>
+<option value="4490">Вігор К</option>
+<option value="4500">Меком Україна ТОВ</option>
+<option value="4501">Гаркуша А.Н.(говядина)</option>
+<option value="4502">Грифон</option>
+<option value="4503">Володя чай № 406</option>
+<option value="5066">Анталія ТОВ</option>
+<option value="4504">Петрик Р.В., ФО-П</option>
+<option value="4505">Максимум</option>
+<option value="4383">САВСЕРВІС-МОВА, ТОВ</option>
+<option value="4507">Рішбур</option>
+<option value="4514">Атлант ДК ТОВ</option>
+<option value="4575">Центр Стандарт</option>
+<option value="4515">Волковская Алла Петровна</option>
+<option value="4516">Фещенко С.П. №113-114</option>
+<option value="4517">Деликат Громова</option>
+<option value="4518">Слобода Деликат</option>
+<option value="4519">Амелін  О.Ю.ПП</option>
+<option value="4520">Елена 2000 ПВКП</option>
+<option value="4521">Поліпром</option>
+<option value="4522">Шудря О.Ю.</option>
+<option value="4523">Кравчук Н.В. ФОП</option>
+<option value="4524">Продуктова лавка ТОВ</option>
+<option value="4525">Литвин С.В. ФОП</option>
+<option value="4526">Шморгун К.М. ФОП</option>
+<option value="4527">Мед Поділля</option>
+<option value="4528">Портал Транс</option>
+<option value="4532">Фіялко В.М. ПП</option>
+<option value="4533">Харченко ПП</option>
+<option value="4534">Козак С.В.</option>
+<option value="4535">Сагун В.Г.</option>
+<option value="4536">Дельта СВ</option>
+<option value="4537">Остапенко Владимир</option>
+<option value="4538">Пилипенко С.С.</option>
+<option value="4539">Нюнин А.Л. МТС</option>
+<option value="4540">Дітрейд</option>
+<option value="4541">Тарасенко Снежанна</option>
+<option value="4544">Морозов В.Г., ПП</option>
+<option value="4545">Жегет</option>
+<option value="4546">Мірончук І.П.(сыр хачапури)</option>
+<option value="4547">Грибанов</option>
+<option value="4548">Коркоть</option>
+<option value="4549">Хоменко</option>
+<option value="4550">Аркадія Олівія ПП</option>
+<option value="4551">СКС ТОВ</option>
+<option value="4552">Бочковский В.В.ПП</option>
+<option value="4553">Арсів ТОВ</option>
+<option value="4554">Нова торгівля ТОВ</option>
+<option value="4555">Юлана</option>
+<option value="4556">Суши Хаус</option>
+<option value="4558">Європак Плюс</option>
+<option value="4559">Гасанов Роман</option>
+<option value="4560">Гончаренко С.(короп)</option>
+<option value="4561">Федорків І.В.(раки)</option>
+<option value="4563">Аква Віта Люкс ТОВ</option>
+<option value="4564">Аквавит</option>
+<option value="4384">Сова - Плюс</option>
+<option value="4565">Ляшенко</option>
+<option value="4566">Коваль Анатолій</option>
+<option value="4567">Иляшенко Ю.М.</option>
+<option value="4568">Сало(раки)</option>
+<option value="4569">Яковлева Н.</option>
+<option value="4570">Інтелгруп ТОВ</option>
+<option value="4571">Снітко</option>
+<option value="4572">Плаушевський в.в.</option>
+<option value="4574">Ешану</option>
+<option value="4576">Фуд Лайн Трейд</option>
+<option value="4577">Мерак ПП</option>
+<option value="4578">Чіпа В.І ФОП</option>
+<option value="4579">Соломикіна(огірок)</option>
+<option value="4580">Тягунский Дмитрий</option>
+<option value="4581">Корректировщик</option>
+<option value="4582">АНД груп</option>
+<option value="4583">Агама Украина ТОВ</option>
+<option value="4584">Россоха</option>
+<option value="4585">Юкі ТОВ</option>
+<option value="4586">Корисні продукти"</option>
+<option value="4588">Омеляненко(сало)</option>
+<option value="4589">Профі-Пак</option>
+<option value="4591">Черкасихліб ЛТД</option>
+<option value="4592">Тягунский Д.Д.</option>
+<option value="4593">Плахотнюк Е.Г.</option>
+<option value="4594">Онойко С.Й. ПП</option>
+<option value="4595">Грабко</option>
+<option value="4596">Цифротех</option>
+<option value="4597">Воротнік В.Л ПП</option>
+<option value="4598">Боть</option>
+<option value="4599">Маршан ЧП</option>
+<option value="4600">Ньютон Маркет</option>
+<option value="4601">Ткаченко О.А.</option>
+<option value="4602">Березняк ФОП</option>
+<option value="4603">Хупченко(раки)</option>
+<option value="4385">Деликат Университетская</option>
+<option value="4604">Головков</option>
+<option value="4605">Кісільова Алла Олександрівна</option>
+<option value="4606">Сидоренко Наташа (кальмар х/к)</option>
+<option value="4607">Лобас</option>
+<option value="4608">Форнетті-Україна Тов з П</option>
+<option value="4609">Джавадов</option>
+<option value="4610">Кириченко</option>
+<option value="4611">Швед(раки,риба)</option>
+<option value="4612">ДІТРЕЙД</option>
+<option value="4613">Михаилов</option>
+<option value="4614">Рачіпа Я.Ю</option>
+<option value="4615">Краснова Тетяна Вікторівна</option>
+<option value="4616">Козловський</option>
+<option value="4617">Яніна</option>
+<option value="4618">Якименко(толстолоб)</option>
+<option value="4619">Саса(кролик)</option>
+<option value="4620">Медком Україна ПП</option>
+<option value="4621">Карамболь</option>
+<option value="4622">Імангулов Д.Л.</option>
+<option value="4623">Агекян М.Н.</option>
+<option value="4624">Лі (бананы)</option>
+<option value="4625">Марківський</option>
+<option value="4626">Стекцов С ПП</option>
+<option value="4627">Александрова(арах.паста)</option>
+<option value="4628">Дмитрієв Р.(арах.масло)</option>
+<option value="4629">Малейкина Т.О.</option>
+<option value="4630">Калашник</option>
+<option value="4631">Данилюк</option>
+<option value="4632">Вернигора</option>
+<option value="4637">Карлік Б.З., ПП</option>
+<option value="4638">Цокало(баранина)</option>
+<option value="4639">Ненька</option>
+<option value="4640">Дядюша (виноград)</option>
+<option value="4641">Проценко</option>
+<option value="4643">Лисенко</option>
+<option value="4644">УДК(нал)</option>
+<option value="4645">СКС бонус</option>
+<option value="4646">Конько(ньютон кролик)</option>
+<option value="4647">Гаркуша Я.П.ПП</option>
+<option value="4648">Романенко (сало)</option>
+<option value="4649">Зленко</option>
+<option value="4650">Паша ПП</option>
+<option value="4651">Максимум</option>
+<option value="4652">Кузнецова Л.П.</option>
+<option value="4653">Київхліб</option>
+<option value="4659">Стадникк(гов,сало)</option>
+<option value="4660">СОНАТА-ТОРГ  ТОВ</option>
+<option value="4661">Вова ТОВ</option>
+<option value="4662">Ткаченко(печень)</option>
+<option value="4663">Михальчук</option>
+<option value="4664">Лупашко</option>
+<option value="4665">Грядунов Д</option>
+<option value="4666">Іваницький</option>
+<option value="4667">Бригада Саша</option>
+<option value="4668">Бригада Вова</option>
+<option value="4669">Алеф-Виналь Крим</option>
+<option value="4670">Буфіус Д.Ю.(пакеты бум)</option>
+<option value="4386">Моваль Трейдинг ТОВ</option>
+<option value="4387">Петрус АЛКО</option>
+<option value="4671">Сiрiус Агро ТОВ</option>
+<option value="4672">Кінцевий споживач</option>
+<option value="4673">Баядера(нал)</option>
+<option value="4674">Саркісян С.</option>
+<option value="4675">Плосконос ПП</option>
+<option value="4676">Чернобай Тарас</option>
+<option value="4677">Панасюк раки</option>
+<option value="4678">Сусідко А.М ФОП</option>
+<option value="4679">Кононенко А.</option>
+<option value="4680">Екопродсервис ТОВ</option>
+<option value="4681">Передрий</option>
+<option value="4682">Сердюк</option>
+<option value="4683">Рошен нал</option>
+<option value="4684">Масолова О.Б.</option>
+<option value="4685">Вахненко</option>
+<option value="4686">Бойко О.М.</option>
+<option value="4687">Мытница</option>
+<option value="4688">Фреш Фуд Груп</option>
+<option value="4590">Жупинас В.Д</option>
+<option value="4695">Забродська Н.В.</option>
+<option value="4696">Буфиус Д.Ю</option>
+<option value="4697">Иванина</option>
+<option value="4698">Екомашпрод ТОВ</option>
+<option value="4700">Плаушевский маркетинг</option>
+<option value="4701">Чорнобай-птица</option>
+<option value="4702">Ципуринда</option>
+<option value="4642">Демьяненко</option>
+<option value="4704">Боровицьке  ПрАТ</option>
+<option value="4705">Деликат Чиковани</option>
+<option value="4706">Деликат Воровского</option>
+<option value="4707">Деликат 5 спецификация</option>
+<option value="4708">Брама ВК</option>
+<option value="4709">Иванова</option>
+<option value="4710">Куксенко</option>
+<option value="4720">Вадим</option>
+<option value="4721">Сарнатський А.В. ПП</option>
+<option value="4722">Градоблянський Р,В,</option>
+<option value="4724">Солекс-Медіа ПП</option>
+<option value="4726">бестком нал</option>
+<option value="4727">Ясногородська  страусова ферма</option>
+<option value="4728">Максименко С.М.</option>
+<option value="4729">Слободяник П.П.</option>
+<option value="4730">Нові Джерела ТД</option>
+<option value="4731">Шептицький В.В.</option>
+<option value="4732">Теплик В.В.</option>
+<option value="4733">НЕПТУН</option>
+<option value="4737">Лонтадзе</option>
+<option value="4738">Мотузенко О.О.</option>
+<option value="4739">Хелетий О.П.</option>
+<option value="4740">Асланян</option>
+<option value="4741">Зінченко А.Д. ПП</option>
+<option value="4393">Боффо ПВКП</option>
+<option value="4395">Корона-Черкаси ТОВ</option>
+<option value="4396">Провайн</option>
+<option value="4397">Маслов П.В.</option>
+<option value="4398">Стелси ООО</option>
+<option value="4399">Черкаська фруктова компанія ПП</option>
+<option value="4400">Агро Тайм ТОВ</option>
+<option value="4742">Стевиясян корпорейшн ООО</option>
+<option value="4743">Григоренко В.В.ФОП</option>
+<option value="4744">Полиформ</option>
+<option value="4745">Слободянник О.В.</option>
+<option value="4746">Лелеко</option>
+<option value="4747">м-н упаковка</option>
+<option value="4748">Слинько О.В.</option>
+<option value="4749">Желейка</option>
+<option value="4750">Гришенко Олександр сергійович</option>
+<option value="4751">Ищенко Сергей  Викторович</option>
+<option value="4752">Головченко</option>
+<option value="4753">Аквариус ТОВ</option>
+<option value="4754">Цабій М.П.</option>
+<option value="4755">Буря С.В.</option>
+<option value="4756">Середа В.С(Cелена салон)</option>
+<option value="4757">Химтранс</option>
+<option value="4758">Зима</option>
+<option value="4759">Системні технології бізнесу</option>
+<option value="4760">Маржан</option>
+<option value="4761">Диста</option>
+<option value="4762">А.В.К  КИЕВ</option>
+<option value="4763">Олейник М.С.</option>
+<option value="4764">Пекалеу</option>
+<option value="4765">КМК ритон</option>
+<option value="4766">Вельд</option>
+<option value="4772">Смачний хліб</option>
+<option value="4773">Черкаская  фруктовая  компания</option>
+<option value="4774">Чистый_мир_трейд</option>
+<option value="4775">Витесс-ЛТД</option>
+<option value="4776">ДДС</option>
+<option value="4777">Забытый товар</option>
+<option value="4723">Бренд-Бар филя  Петрус -кондитер</option>
+<option value="4725">Пресса ОТ и ДО ТОВ</option>
+<option value="4778">ВЕК-ТОР</option>
+<option value="4779">Фруктовий дом Империал</option>
+<option value="4401">Тимченко В.Г. ПП</option>
+<option value="4402">Леко  ТД ТОВ</option>
+<option value="4780">Омельчук И.М. ФОП</option>
+<option value="4781">Евтушенко ФОП</option>
+<option value="4782">Біда К.А. ФОП</option>
+<option value="4785">Лопатин М.М.ПП</option>
+<option value="4786">Солекс НАЛ</option>
+<option value="5130">Приват Торговий Дом</option>
+<option value="4787">Дидорук  Виктор Петрович</option>
+<option value="4882">Цегельник І.В</option>
+<option value="4788">Шуліка В.О. ФОП</option>
+<option value="4789">Зоря ЧП</option>
+<option value="4790">Станиславская  торговая камп НАЛ</option>
+<option value="4791">АгроСоюзСнаб  Тзов</option>
+<option value="4792">Марком нал</option>
+<option value="4793">Сучасні Біопродукти нал</option>
+<option value="4794">Роял Фрут Украина нал</option>
+<option value="4795">Драч С.В. (аквасана)</option>
+<option value="4796">Флеш</option>
+<option value="4797">Еталон С</option>
+<option value="4798">Сидоренко М.М.ПП</option>
+<option value="4799">Кузьменко А.І</option>
+<option value="4800">Бершадська Віра Тимофіївна</option>
+<option value="4801">Сыч(раки)</option>
+<option value="4802">СавСервис(нал)</option>
+<option value="4803">Бичков (раки)</option>
+<option value="4804">ДКАС ПП</option>
+<option value="4403">Компанія Іщенко ПП</option>
+<option value="4404">Флеш Валера</option>
+<option value="4405">Гуменюк А.В.</option>
+<option value="4805">Пика Владимир Николаевичь</option>
+<option value="4806">Феномен нал</option>
+<option value="4807">Дорошенко(клубника)</option>
+<option value="4808">пшеничная л.в.</option>
+<option value="4809">Гнедаш</option>
+<option value="4810">Слобідка (Елена)</option>
+<option value="4811">Шидловский Д.И.</option>
+<option value="4812">Атамась В.В.</option>
+<option value="4813">Бюро Вин ТОВ</option>
+<option value="4814">Хупченко М.И.</option>
+<option value="4815">Вартаньян Олексія  Арменакович</option>
+<option value="4818">Квадрат-Галерея"Європ. площа"</option>
+<option value="4819">Найговзен А.М.</option>
+<option value="4820">ЧеркасыЕлеваторЗбут</option>
+<option value="4821">Власенко И.И.</option>
+<option value="4822">Балоха С. НАЛ</option>
+<option value="4823">Третяк о.и.</option>
+<option value="4824">Бершадський Сергій Георгійович</option>
+<option value="4826">Преміум снек ТОВ</option>
+<option value="4827">Сучані Біопродукти ТОВ</option>
+<option value="4828">Продовольчий Альянс СТОВ</option>
+<option value="4829">Решетило НАЛ</option>
+<option value="4831">Колесник (редиска)</option>
+<option value="4832">Криворучко ПП (творог)</option>
+<option value="4833">Дубровский В.А.</option>
+<option value="4834">Правда В.П.</option>
+<option value="4835">Филенко Вадим</option>
+<option value="4836">Конкор Маркет</option>
+<option value="4837">Плодиста С.О.</option>
+<option value="4406">Приват-Групп ТОВ</option>
+<option value="4407">Гончар М.М. ПП</option>
+<option value="4838">Универсал  ТОВ</option>
+<option value="4839">Романенко (баяд.)</option>
+<option value="4840">Квазар Агро нал.</option>
+<option value="4841">Бізнес групп ю нал</option>
+<option value="4842">Аурис трейд</option>
+<option value="4843">Океанполис</option>
+<option value="4844">Платошин К.</option>
+<option value="4845">Агрокосм, ТОВ</option>
+<option value="4846">Грабарь Оксана Петрівна ФОП</option>
+<option value="4847">Хупченко(раки)</option>
+<option value="4848">Дискант О.П. ПП</option>
+<option value="4849">Ліхітченко Б.М. ПП</option>
+<option value="4850">Агрофирма Доступ</option>
+<option value="4851">Лекро ПВКФ</option>
+<option value="4853">Саранюк</option>
+<option value="4854">Гордій Г.П.(Сула)</option>
+<option value="4855">Клэр</option>
+<option value="4856">Черкасирибгосп ВАТ</option>
+<option value="4858">Тищенко</option>
+<option value="4859">Ромазанов</option>
+<option value="4860">Атамась В.Ю.</option>
+<option value="4861">Три Ведмедя, ТОВ</option>
+<option value="4862">Лещенко</option>
+<option value="4863">Дель Михаил Яковлевич</option>
+<option value="4408">Артбудкомфорт ТОВ</option>
+<option value="4409">Гаркуша Петро Петрович ПП</option>
+<option value="4410">Обрій Черкаси ТОВ</option>
+<option value="4411">Контрагент по обмену</option>
+<option value="4412">Гурков В.С.</option>
+<option value="4413">Колор Тов</option>
+<option value="4414">Аникс-Черкаси, ТОВ</option>
+<option value="4415">Иванов</option>
+<option value="4416">Глобинский мясокомбинат</option>
+<option value="4419">Валпекс ТОВ</option>
+<option value="4420">Діденко С.М. ПП</option>
+<option value="4421">Вірс-центр ПП</option>
+<option value="4422">ЧПК Торговий дім</option>
+<option value="4864">Бойко А.Н.</option>
+<option value="4865">Алтай ТОВ</option>
+<option value="4869">Дзюбан Т.Г. ПП</option>
+<option value="4870">Черкасская Бавария Бар</option>
+<option value="4871">Таран Т.Л(оскар)</option>
+<option value="4872">Круглий ЧП (раки)</option>
+<option value="4873">Олма  Плюс</option>
+<option value="4874">Цегельник</option>
+<option value="4875">Чиковани</option>
+<option value="4876">Сільвер-Фуд ООО</option>
+<option value="4877">Деликат Сумгаитская</option>
+<option value="4878">Дедюра</option>
+<option value="4879">Кучеренко  С.Ю.ПП</option>
+<option value="4880">Кучеренко Оксана Владимировна</option>
+<option value="4881">Валентин (Италия)</option>
+<option value="4883">Решетило О.І</option>
+<option value="4884">Кондитерский цех рынок</option>
+<option value="4885">Базар Инга</option>
+<option value="4887">Даниленко А.В. ПП</option>
+<option value="4889">Токмак О.В.</option>
+<option value="4890">Майєр ТД ООО</option>
+<option value="4891">Федорченко</option>
+<option value="4892">ДіджіЕф інтернешнл  Кулінарі Кон</option>
+<option value="4893">Магна про</option>
+<option value="4894">Сторедж НАЛ</option>
+<option value="4895">Шевченко И.Д.</option>
+<option value="4896">Е-шиша</option>
+<option value="4897">Преферанц прайс</option>
+<option value="4898">Валексар</option>
+<option value="4899">Мир кальянов</option>
+<option value="4900">Лотарев А.В.</option>
+<option value="4901">Кинаш С.В.</option>
+<option value="4902">АТЛАНТИС НАЛ</option>
+<option value="4903">Чайная компания ТОВ</option>
+<option value="4904">Авангард Дистрибуції ТОВ</option>
+<option value="4905">Байрон Агро</option>
+<option value="4906">Юнайтет Фудз</option>
+<option value="4909">Богдан</option>
+<option value="4910">Альта Виста ТОВ</option>
+<option value="4911">Билоног</option>
+<option value="4912">Витязь алко групп</option>
+<option value="4913">Радченко Г.В.</option>
+<option value="4914">Магна Про</option>
+<option value="4915">Шинкарь</option>
+<option value="4916">Кузьміч С.В</option>
+<option value="4917">Панда ТОВ</option>
+<option value="4918">Мытница-Чапаевка</option>
+<option value="4919">Клименко В.В.</option>
+<option value="4920">Прошанский Коньяч.Завод Укр.ТзОВ</option>
+<option value="4922">Роял Фуд ТзОВ</option>
+<option value="4923">Торгоснова</option>
+<option value="4924">Черкаситара</option>
+<option value="4926">Кінаш С.В</option>
+<option value="4927">Ключко М.М,</option>
+<option value="4928">Миронівський хлібопродукт ПАТ</option>
+<option value="4929">ДДС нал</option>
+<option value="4930">Филиппов Ю.А.</option>
+<option value="4931">Зеленский Сумгаит</option>
+<option value="4932">Продвктовая лавка  плюс</option>
+<option value="4933">АНД груп нал</option>
+<option value="4934">Маслов нал</option>
+<option value="4935">Рибанов ТОВ</option>
+<option value="4936">Устиченко О.О. ФОП</option>
+<option value="4937">Евродринк НАЛ</option>
+<option value="4939">Черкассы Елеватор Маш</option>
+<option value="4940">ЧСПМ"Делікат-1"ТОВ</option>
+<option value="4941">Марьяж</option>
+<option value="4942">Импап ТзОВ</option>
+<option value="4943">Осипенко М.И. Оил стандарт</option>
+<option value="4944">Тепло ресурс ПП</option>
+<option value="4945">ЯЩИК ПП</option>
+<option value="4946">Мусатова Фоп</option>
+<option value="4947">ФОРВАРД -СВ ТОВ</option>
+<option value="4948">Пешков</option>
+<option value="4949">ІС-Сервіс ТзОВ  ОФициал</option>
+<option value="4950">Холден ТОВ</option>
+<option value="4951">Девилон ТзОВ</option>
+<option value="4952">Галиновский  О.Б. ПП</option>
+<option value="4953">Гранд Крю ТОВ</option>
+<option value="4954">Мельник С.В. ПП</option>
+<option value="4955">Базар Чиковани, Громова</option>
+<option value="4956">Мантула Ж.В. ПП</option>
+<option value="4957">Киевская Мясная ТехКомпания</option>
+<option value="4961">Омелянчук Василий Никол</option>
+<option value="4962">Екструдер продукт ПП</option>
+<option value="4963">Бутрик Л. М ФОП</option>
+<option value="4964">ЧСПМ ТзОВ</option>
+<option value="4965">Измаилов ПП</option>
+<option value="4966">Венд ПП</option>
+<option value="4968">Сторедж ТзОВ</option>
+<option value="4969">Студия-13 ТзОВ</option>
+<option value="4970">Проф-Пак ТзОВ</option>
+<option value="4971">Мельник Лидия ФОП</option>
+<option value="4972">Доброштан В И ФОП</option>
+<option value="5056">ІНТЕРНАЦІОНАЛЬНА Г-ПА ВИН УК.№1</option>
+<option value="4973">Черкасириба-1</option>
+<option value="4974">Дробницька  НЕ РАБОТ.</option>
+<option value="4975">Дробницька Т.І. ФОП</option>
+<option value="4976">Дядюра О.М</option>
+<option value="4925">Антаго-Трейд</option>
+<option value="4977">Белиненко А.В.ФОП</option>
+<option value="4980">Перший Київький Молочний Завод Т</option>
+<option value="4981">Карастан Віктор Іванович</option>
+<option value="4982">Кава-Сервіс Торговий Дім ПП</option>
+<option value="4983">Соєва Фабрика Агропрод ТзОВ</option>
+<option value="4984">Актів-ЛТД"</option>
+<option value="4985">Черкасириба Торговий дім ТОВ</option>
+<option value="4986">Багира Рекл Агенство ТзОВ</option>
+<option value="4987">Кропс ПП</option>
+<option value="4989">Сікачина О.П. ФОП</option>
+<option value="4990">Харенко Н.В. ФОП</option>
+<option value="4991">Жбанников К.Ю. ФОП</option>
+<option value="4992">Вондер ПАК (Кононец Л.А)</option>
+<option value="4993">Шоколино Кондитерский Дом ТОВ</option>
+<option value="4994">Інтератлантік ТОВ</option>
+<option value="4995">Лі Н.Г. ФОП(соленья)</option>
+<option value="4996">Гранекс-Черкаси ТзОВ</option>
+<option value="4997">Італфуд Україна ТзОВ</option>
+<option value="4426">Маткин Б.М. ПП</option>
+<option value="4999">Дистрибуційні мережі ТзОВ</option>
+<option value="5001">Джуменко В.І ФОП</option>
+<option value="5002">Контакт Филия Контакт-4 СП</option>
+<option value="5003">Бондаренко нал ON CoFFE</option>
+<option value="4423">Самоцвіт ТОВ</option>
+<option value="4424">Едельвейс-А</option>
+<option value="5004">Орел Г.Н. ФОП (кролик)</option>
+<option value="5005">Зінченко Ю.Д ПП</option>
+<option value="5006">Фабрика кондит прикрас ПП</option>
+<option value="5007">Телец ТОВ</option>
+<option value="5008">Кузнецов О.А. ФОП</option>
+<option value="5009">Аль Хамуд Омар</option>
+<option value="5010">Даника ТОВ</option>
+<option value="5011">КМТК ТОВ нал</option>
+<option value="5012">ЄВРОДРІНК ТОВ</option>
+<option value="5014">Чайковский Артем ФОП</option>
+<option value="5015">Козлов И.В</option>
+<option value="5016">Якименко Анна Михайловна ФОП</option>
+<option value="5017">Іванченко В.П.(Італія)</option>
+<option value="5018">Петруцалек ООО</option>
+<option value="5019">Магазин" Раки"</option>
+<option value="5020">БИЗНЕСТРЕЙД ТОВ</option>
+<option value="5021">ЕФТА-груп</option>
+<option value="5022">Вельд Украина ТзОВ</option>
+<option value="5023">Агросвіт ТОВ</option>
+<option value="5024">Шпаковський О.В.</option>
+<option value="5025">Швец Л.В ФОП</option>
+<option value="5026">Ватутінський Хлібокомбінат ПАТ</option>
+<option value="5027">Пи джи трейд (акция компенсация)</option>
+<option value="5028">Бейкері.Ру ТОВ</option>
+<option value="5029">Хімтрейдгруп ТОВ</option>
+<option value="5030">Туаев Руслан</option>
+<option value="5031">Микосянчик Олег</option>
+<option value="5032">Барило А.</option>
+<option value="5033">Укргоспротовари ПП</option>
+<option value="5035">Снисар И.О ФОП</option>
+<option value="5036">Провіант Плюс ТД ТОВ</option>
+<option value="5037">Любич М.М ФОП</option>
+<option value="5038">Мегапровіант ТОВ</option>
+<option value="5039">Олійник В,Л ФОП</option>
+<option value="5040">Гавришева С.</option>
+<option value="5041">Кузаева  ПП "ВКФ"АВЕ"</option>
+<option value="5042">Експертиза Консалт ТОВ</option>
+<option value="5044">Айдіас Фекторі ТОВ</option>
+<option value="5045">Шидловский Д.</option>
+<option value="4978">Метро Кеш Енд Кери Украина</option>
+<option value="4979">Кузьмина М.</option>
+<option value="4425">Реза контейннер  №344-345ЧП</option>
+<option value="5046">ТИГРЕС ТОВ</option>
+<option value="5047">СТАУРОС  ТОВ</option>
+<option value="5048">Ігмапак ТОВ</option>
+<option value="5049">РОСІО ТОВ</option>
+<option value="5050">Гармонія Центр 2014 ТОВ</option>
+<option value="5051">Вавілон Трейд ТОВ</option>
+<option value="5052">ОЛЕКСАНДРІЯ-БЛІГ ТОВ</option>
+<option value="5054">Юнімед ТОВ</option>
+<option value="5055">Піхотенко С.В ФОП</option>
+<option value="5057">Ешаку В.Г</option>
+<option value="5058">НОВЕЛ ПП</option>
+<option value="5060">Фарм Органик ТОВ</option>
+<option value="5061">Золотоніські Сади ТОВ</option>
+<option value="5071">Швидкий А.</option>
+<option value="5076">Гайдар плюс ТОВ</option>
+<option value="5078">Корніенко Д.МФОП(ложка для меда)</option>
+<option value="5079">ЮД-ПАК ХАРКІВ ТОВ</option>
+<option value="5080">АЙСШОК ТОВ</option>
+<option value="5081">СТВ-Харків ТОВ</option>
+<option value="5082">ЯСЕНСВІТ ТОВ</option>
+<option value="5083">ВІТЕСС-ЛТД ТОВ</option>
+<option value="5084">ДІСНА ТОВ</option>
+<option value="5086">Медіа-Мастер</option>
+<option value="5089">ЮКРЕЙНІАН ВОТЕРС ГРУПП ТОВ</option>
+<option value="5091">СТЕВІЯСАН КОРПОРЕЙШН ТОВ</option>
+<option value="5092">Торгпрод-2004 ТОВ</option>
+<option value="5093">Марченко В.В ФОП</option>
+<option value="5094">Єрис В.І ПП</option>
+<option value="5095">ОРГАНІК МІЛК ТОВ</option>
+<option value="5098">Линник С.І ФОП</option>
+<option value="5099">Удовиченко Э.</option>
+<option value="5100">ОДІСЕЙ ПП</option>
+<option value="5101">ДРАФТ ТОВ</option>
+<option value="5102">Мак-Вар Экопродукт ТОВ</option>
+<option value="5103">Місюра Є.Г</option>
+<option value="5104">КОМАНДО-К ТОВ</option>
+<option value="5105">Савинская О.</option>
+<option value="4587">РИНКОВІ ТЕХНОЛОГІЇ ПП</option>
+<option value="4441">Медком МП Україна ТОВ</option>
+<option value="5106">Компанієць І.Л. ФОП</option>
+<option value="5107">Адана-3 ТОВ</option>
+<option value="5108">Кобильський Тарас Григорович ФОП</option>
+<option value="5109">ФУД ІМПОРІУМ ТОВ</option>
+<option value="5110">Михайлевский Н.А ФОП</option>
+<option value="5111">АКК"ВАРІАНТ" ТОВ</option>
+<option value="5112">Интернет-магазин "Tcoffe"</option>
+<option value="5114">Бугаєвський С.О. ФОП</option>
+<option value="5115">Бондаренко І.І. ФОП</option>
+<option value="5116">Делішес Фуд ТОВ</option>
+<option value="5118">Шарлотка-Пекарня</option>
+<option value="5119">Гавришева С.</option>
+<option value="5128">Рембудтехнология-2006 ПП</option>
+<option value="5129">Фармацевтичні товари Украіни</option>
+<option value="5132">НААН України  ДДП ІПР</option>
+<option value="5133">Медікон ТОВ</option>
+<option value="5136">Креатив-Принт ТОВ</option>
+<option value="5143">Фітьо Т.Я ФОП</option>
+<option value="5150">Керхер ТОВ</option>
+<option value="5155">Гурков(нал)</option>
+<option value="5158">Джигомон Є.О ФОП</option>
+<option value="5163">Ляшенко Т.А</option>
+<option value="5167">Мантіга Україна ТОВ</option>
+<option value="5168">Прокопенко А.П</option>
+<option value="4442">Тальнівский завод "Мінводи" ТОВ</option>
+<option value="4443">Кальненко Саша контейнер №342 ЧП</option>
+<option value="4444">Тригубчук О .М ПП</option>
+<option value="4445">Барановська Ганна Мечеславівна</option>
+<option value="4449">КРАСС</option>
+<option value="4450">Іващенко Ж.І. ПП</option>
+<option value="4451">Мацола С.Ю. ПП</option>
+<option value="4452">Квазар-Агро</option>
+<option value="4453">Київхліб "Хлібкомбінат №2"</option>
+<option value="4388">Василевський С.С.</option>
+<option value="4454">Страшко В.Ф.</option>
+<option value="4455">Коваль ПП</option>
+<option value="4456">Манташов ТОВ Торг. дім</option>
+<option value="4446">Золотоніська птахофабрика</option>
+<option value="4457">Поларіс-С ТОВ</option>
+<option value="4458">Міжнародна група морепродуктів</option>
+<option value="4459">Ласка Черкаси ТОВ</option>
+<option value="4470">Укрморепродукт ТОВ</option>
+<option value="4471">Альянс Групп МД</option>
+<option value="4472">Тавіс ПП</option>
+<option value="4473">Торгмережі України</option>
+<option value="4475">Кока-Кола Беверіджис Україна Л-д</option>
+<option value="4476">Соломка М.П. ПП</option>
+<option value="4477">Тупикин В.В. ПП</option>
+<option value="4478">Імперія СВ ТОВ</option>
+<option value="4480">Яровенко О.О. ФОП</option>
+<option value="4482">Настенко  В.А.ПП</option>
+<option value="4484">Молочний край ТД ТОВ</option>
+<option value="4485">Ткаченко М.І. ПП</option>
+<option value="4486">Деликат Чиковани</option>
+<option value="4491">Моріжок Ферм.госп.</option>
+<option value="4492">Добродія ТД</option>
+<option value="4493">Санте-Алко</option>
+<option value="4494">Зінто ТОВ</option>
+<option value="4495">Біляєв С.Л. ПП</option>
+<option value="4496">Чудова марка</option>
+<option value="4497">Кібальник Ю.О.</option>
+<option value="4498">Авалон 3000 ТОВ</option>
+<option value="4499">Кузнецов ПП</option>
+<option value="4506">КОВАЛЕНКО  С.М. ПП</option>
+<option value="4508">Реактивная устрица</option>
+<option value="4509">Айварис ТОВ</option>
+<option value="4510">Кожевникова Н.І. ПП</option>
+<option value="4511">Альфа Тул ТОВ</option>
+<option value="4512">Мясорибторг ТОВ</option>
+<option value="4513">Дари ланів торговий дім ТОВ</option>
+<option value="4392">Атлантіс</option>
+<option value="4542">Фуд Сервіс Груп</option>
+<option value="4543">Трейд-Пак</option>
+<option value="4573">Хорека-Сервис</option>
+<option value="4633">Диденко овощи</option>
+<option value="4634">Авалон нал</option>
+<option value="4635">Черкаський А.Г., ПП</option>
+<option value="4636">Латориця ЛТД</option>
+<option value="4699">Скибенко Л.В.</option>
+<option value="4715">Илья</option>
+<option value="4767">АРСпроект</option>
+<option value="4768">Козацкое-Дон</option>
+<option value="4769">Вовк Світлана</option>
+<option value="4770">Пістун</option>
+<option value="4771">Обштир</option>
+<option value="4816">Сильпо</option>
+<option value="4817">СТК ТОВ</option>
+<option value="4830">Сільпо</option>
+<option value="4866">Шевченко Д.С.</option>
+<option value="4867">Тарасенко В.Г.</option>
+<option value="4868">Шевченко</option>
+<option value="4907">Овочева скарбниця ТОВ</option>
+<option value="4908">НК Сервис</option>
+<option value="4958">Флагман Сіфуд ТзОВ</option>
+<option value="4959">Поляков нал</option>
+<option value="4960">Вовченко ВВ ФОП</option>
+<option value="4998">Черкаси ЕГС-Трейд</option>
+<option value="5000">Мусатова Н.М. ФОП  ОФиц</option>
+<option value="5043">ЕКОПРОМТРАНС ТОВ</option>
+<option value="4366">Діоніс, ТОВ</option>
+<option value="4367">Ходак, ТОВ</option>
+<option value="4368">Дрінк Дістрібушн Сістем</option>
+<option value="4369">Українська дистрибуційна компані</option>
+<option value="4370">Кулинарный цех</option>
+<option value="5062">Ковбасенко Сергій</option>
+<option value="4377">Стар-Трейд1 ПП</option>
+<option value="4417">Черкасихліб ЛТД ТОВ</option>
+<option value="4418">Логістік-Черкаси ТОВ</option>
+<option value="4427">Хаас Україна Ед.</option>
+<option value="4428">ТрансЛогістік ТОВ</option>
+<option value="4429">Зозуля О.Я. ФОП</option>
+<option value="4430">Панасенко Р.В. ПП</option>
+<option value="4431">НІАН</option>
+<option value="4432">Тріумф-опт, ТОВ</option>
+<option value="5059">Гриценко Н.</option>
+<option value="5063">Тиховодов Сергій Юрьевич</option>
+<option value="5064">Корпай В.В</option>
+<option value="5065">Гребиниченко Л.М ФОП</option>
+<option value="5067">Студіопак Україна Лімітед ТОВ</option>
+<option value="5068">Филиппова Наталья Владимировна</option>
+<option value="5069">Максименко С.И(гриби)</option>
+<option value="5070">Інститут з питань іхтіології</option>
+<option value="4434">Стерлінг, ПП</option>
+<option value="4435">Шарлотка-Черкаси</option>
+<option value="4436">ТеоретТОВ</option>
+<option value="4437">Рахманев Ф.С ФОП</option>
+<option value="4438">Массандра</option>
+<option value="4439">Орландо ТОВ</option>
+<option value="4433">Київський експ.з-д харч.маш</option>
+<option value="5072">Іщенко Олег Григорович ФОП</option>
+<option value="4703">Автомагазин</option>
+<option value="5073">Балюк Руслан Сергеевич ФОП</option>
+<option value="5074">Ай Інкам ТзОВ</option>
+<option value="5075">Гордиенко Е.І ФОП</option>
+<option value="5077">Петрик Р.В</option>
+<option value="4440">Віннер-СВ ПП</option>
+<option value="4529">Кравченко В.В.(Рудницкий)</option>
+<option value="4690">Петрус нал</option>
+<option value="4691">Ріал Проперті ТОВ</option>
+<option value="4692">Триада Систем нал</option>
+<option value="4693">Морозов(паски)</option>
+<option value="4694">Фреш фуд НАЛ</option>
+<option value="4711">Денисенко</option>
+<option value="4712">Украинский продукт КФ ЧП</option>
+<option value="4713">ЧПК Т.Д.ТОВ</option>
+<option value="4714">Луценко С. М. ПП</option>
+<option value="4716">Дельфин</option>
+<option value="4717">Мартиненко О.С.</option>
+<option value="4718">Обрий(нал)</option>
+<option value="4719">Арда -маркетинг</option>
+<option value="4734">Терм ТОВ</option>
+<option value="4735">Кричевский М.О.</option>
+<option value="4736">Маршан, ЧП</option>
+<option value="5087">Мінеральні води України ТОВ</option>
+<option value="4783">Афина ТД</option>
+<option value="5088">АВІС-УКРАЇНА</option>
+<option value="5090">Драйд Фудс ТОВ</option>
+<option value="4886">Марленка_украина</option>
+<option value="4888">Круглий Роман</option>
+<option value="4938">ЧСПМ  НАЛ</option>
+<option value="4988">Петров Станислав ФОП</option>
+<option value="5034">Авангард-Инвест ТОВ</option>
+<option value="5096">Дробницький А.І ФОП</option>
+<option value="5097">Гулівер Інтернешнл ТОВ</option>
+<option value="5053">ПЕРЕЯСЛАВ-МОЛПРОДУКТ ТОВ</option>
+<option value="5113">Васильченко С.В ФОП</option>
+<option value="5117">Лабуренко В.Е ФОП</option>
+<option value="5120">Де Е.</option>
+<option value="5121">Арт-Презент ТОВ</option>
+<option value="5122">АЯКС-1 ТОВ</option>
+<option value="5123">Система Оптимум ПП</option>
+<option value="5124">Діонис ТОВ (хоз.нужди)</option>
+<option value="5125">ФРОЗЕН ТРЕЙД ТОВ</option>
+<option value="5126">Кучеренко В.А (раки,риба)</option>
+<option value="5127">Майденко Л.С ФОП</option>
+<option value="5131">Зямано А.О ФОП(рыба)</option>
+<option value="4394">Юрія, ПАТ</option>
+<option value="5169">ДЖЕМІНІ ППВф</option>
+<option value="5170">СВІТС-7 ТОВ</option>
+<option value="4391">Баядера Логістік</option>
+<option value="4461">Більда А.О. ПП</option>
+<option value="4562">Чернов О.Г.</option>
+<option value="4373">Гладкий А.Г., ПП</option>
+<option value="4967">Фабер ТзОВ</option>
+<option value="5013">АССЕФ ФОП</option>
+<option value="4375">Мельник В.М. ПП</option>
+<option value="4374">Поляков, Торговий дім ПП</option>
+<option value="4376">Друг ПП</option>
+<option value="4378">Коноваленко О.Г. ПП</option>
+<option value="4379">Ньютон, ЧСП</option>
+<option value="4371">Фонд, ТОВ</option>
+<option value="4372">Коллега ЧП</option>
+<option value="4380">Капрі-трейд ТОВ</option>
+<option value="4381">Лідерторгсервіс ТОВ</option>
+<option value="4389">Пи Джи Трейд</option>
+<option value="4390">Мегаполіс-Україна ТОВ ТК</option>
+<option value="4447">Бершадський Сергій Георгійович</option>
+<option value="4448">Хіміч О.І.</option>
+<option value="4460">Оіл Стандарт ТОВ</option>
+<option value="4462">Арда-Трейдінг ТОВ</option>
+<option value="4463">Форт Скипер</option>
+<option value="4464">Консул</option>
+<option value="4465">Ходжаян К.Я.ПП</option>
+<option value="4468">Медком Бонус</option>
+<option value="4784">Казбет</option>
+<option value="4852">Рула Л.</option>
+<option value="5085">Ганжа Е.</option>
+<option value="4825">Р.В.</option>
+<option value="4530">Дівнич(Саша Юг-З)</option>
+<option value="4531">Доминанта Фуд</option>
+<option value="4557">Яценко(виталик толстолоб)</option>
+<option value="4654">Інпак ТОВ</option>
+<option value="4655">Икорний дом</option>
+<option value="4656">Буассон Еліт "Бельведер Груп"</option>
+<option value="4657">Савранский</option>
+<option value="4658">Голубничий</option>
+<option value="4689">Макс Хубер</option></select>
+
+
+</div>
+
+<button type="submit" title="Поиск" class="btn-success btn-icon btn" id="apply-filter-btn" disabled="" data-toggle="tooltip" data-placement="top" autocomplete="off"><i class="fa fa-search mrg-right-0"></i></button>
+</form>
+
+</div>
+<div class="col-xs-12  col-sm-12 col-md-12 col-lg-3 text-right text-left-md-desc mrg-top-5-md-desc">
+<button type="button" class="btn-primary btn" data-toggle="modal" data-target="#mass-update-modal" autocomplete="off">Mass update</button>
+<div class="btn-group dropdown ng-isolate-scope" dropdown="" name="buffers_new_items" url="/test_delikat/panel/buffers_new_items">
+  <button class="btn btn-primary" ng-click="open()">
+    <i class="fa fa-filter mrg-right-0"></i>
+  </button>
+  <button aria-expanded="false" aria-haspopup="true" class="btn btn-primary ng-binding" dropdown-toggle="">
+
+    <span class="caret"></span>
+  </button>
+  <!-- ngIf: user_filters.length > 0 -->
+  <!-- ngIf: showClose() -->
+</div>
+<button class="btn btn-primary ng-isolate-scope" ng-click="showModal()" title="Колонки" type="button" bg="jquery" name="buffers_new_items">
+  <i class="fa fa-table mrg-right-0"></i>
+</button>
+<div class="wrap-export-file"><div class="dropdown mod-dropdown"><button type="button" title="Экспортировать" class="btn btn-primary btn-icon dropdown-toggle" data-toggle="dropdown"><i class="fa fa-download mrg-right-0"></i></button><ul class="dropdown-menu" role="menu"><li><a href="/test_delikat/panel/buffers_new_items/export_to.csv">CSV</a></li><li><a href="/test_delikat/panel/buffers_new_items/export_to.xls">XLS</a></li><li><a href="/test_delikat/panel/buffers_new_items/export_to.xlsx">XLSX</a></li></ul></div></div>
+</div>
+</div>
+
+</div>
+<div class="panel-body">
+<div id="buffers-new-items-block">
+<div class="dhtmlx-grid-container-wrap">
+<div class="dhtmlx-grid-container gridbox gridbox_web isModern" data-align="left,left,left,left,left,left,center,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left,left" data-header="{#master_checkbox} Use MOQx1.5,Действия,New buffer,{#master_checkbox} MTS,SKU,Название,Активный,Склад,Поставщик,Менеджер,Movers,MOQ,Буфер,Остаток,ОБ показатель,В пути,ОПБ показатель,Группа-1,Группа-2,Группа-3,Группа-4,Группа-5,Полное название,Вид товара,Тип товара,Торговая марка,Товар в акции,Ожидание акции,Запрет закупки,Признак разделения,Код склада,Формат,Код поставщика,Ед.измерения,Производитель,Код менеджера,Буфер безопасности,ББ-1,Мин буфер,Макс буфер,MOQx1.5,USQ,Дата буфера,Период,Цена закупки,Цена продажи,Вес,Объем,Единоразовый заказ" data-ids="use_moqx15,actions,new_buffer,mts,sku,name,active,warehouse,supplier,manager,movers,moq,buffer,balance,bb_rate,in_transit,btb_rate,additional_1,additional_2,additional_3,additional_4,additional_5,additional_6,additional_7,additional_8,additional_9,wh_additional_1,wh_additional_2,wh_additional_3,order_split_mark_code,warehouse_code,level,supplier_code,dimension,manufacturer,manager_code,safety_buffer,sb_1,min_buffer,max_buffer,moqx15,usq,buffer_date,season,purchase_price,sale_price,weight,volume,order_once" data-move-url="/test_delikat/panel/users/buffers_new_item_column_move" data-move="false,false,false,false,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true" data-name="buffers_new_items" data-save-url="/test_delikat/panel/buffers_new_items" data-sort="na,na,na,na,srv,srv,srv,srv,srv,na,na,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,srv,na,srv,na,na,srv,srv,srv,srv,srv,na,srv,srv,srv,srv,srv,srv,srv,srv" data-types="ch,buffers_new_items_actions,ed,ch,ro,ro,roch,ro,ro,ro,ro,ron,ron,ron,percent,ro,percent,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ro,ron,ro,ron,ron,ro,ron,ro,ro,ron,ron,ron,ron,ed" data-url="/test_delikat/panel/buffers_new_items.json" data-validators=",,ValidNewBuffer,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,NotEmpty" id="buffers-new-items-table" style="width: 1147.1px; height: 558px; cursor: default;"><div class="xhdr" style="width: 100%; height: 24px; overflow: hidden; position: relative;"><div style="display: none; position: absolute;" class="dhxgrid_sort_desc"></div><table cellpadding="0" cellspacing="0" class="hdr" style="width: 5151px; table-layout: fixed; margin-right: 20px; padding-right: 20px;"><tbody><tr style="height: auto;"><th style="height: 0px; width: 93px;"></th><th style="height: 0px; width: 97px;"></th><th style="height: 0px; width: 76px;"></th><th style="height: 0px; width: 48px;"></th><th style="height: 0px; width: 55px;"></th><th style="height: 0px; width: 370px;"></th><th style="height: 0px; width: 69px;"></th><th style="height: 0px; width: 50px;"></th><th style="height: 0px; width: 77px;"></th><th style="height: 0px; width: 72px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 44px;"></th><th style="height: 0px; width: 52px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 95px;"></th><th style="height: 0px; width: 53px;"></th><th style="height: 0px; width: 102px;"></th><th style="height: 0px; width: 188px;"></th><th style="height: 0px; width: 216px;"></th><th style="height: 0px; width: 209px;"></th><th style="height: 0px; width: 244px;"></th><th style="height: 0px; width: 188px;"></th><th style="height: 0px; width: 370px;"></th><th style="height: 0px; width: 78px;"></th><th style="height: 0px; width: 111px;"></th><th style="height: 0px; width: 104px;"></th><th style="height: 0px; width: 94px;"></th><th style="height: 0px; width: 106px;"></th><th style="height: 0px; width: 100px;"></th><th style="height: 0px; width: 126px;"></th><th style="height: 0px; width: 77px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 104px;"></th><th style="height: 0px; width: 90px;"></th><th style="height: 0px; width: 98px;"></th><th style="height: 0px; width: 100px;"></th><th style="height: 0px; width: 126px;"></th><th style="height: 0px; width: 41px;"></th><th style="height: 0px; width: 76px;"></th><th style="height: 0px; width: 81px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 42px;"></th><th style="height: 0px; width: 85px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 90px;"></th><th style="height: 0px; width: 94px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 126px;"></th></tr><tr><td style="cursor: default;"><input type="checkbox">&nbsp;Use&nbsp;MOQx1.5</td><td><div class="hdrcell">Действия</div></td><td><div class="hdrcell">New&nbsp;buffer</div></td><td><input type="checkbox">&nbsp;MTS</td><td><div class="hdrcell">SKU</div></td><td><div class="hdrcell">Название</div></td><td><div class="hdrcell">Активный</div></td><td><div class="hdrcell">Склад</div></td><td><div class="hdrcell">Поставщик</div></td><td><div class="hdrcell">Менеджер</div></td><td><div class="hdrcell">Movers</div></td><td><div class="hdrcell">MOQ</div></td><td><div class="hdrcell">Буфер</div></td><td><div class="hdrcell">Остаток</div></td><td><div class="hdrcell">ОБ&nbsp;показатель</div></td><td><div class="hdrcell">В&nbsp;пути</div></td><td><div class="hdrcell">ОПБ&nbsp;показатель</div></td><td><div class="hdrcell">Группа-1</div></td><td><div class="hdrcell">Группа-2</div></td><td><div class="hdrcell">Группа-3</div></td><td><div class="hdrcell">Группа-4</div></td><td><div class="hdrcell">Группа-5</div></td><td><div class="hdrcell">Полное&nbsp;название</div></td><td><div class="hdrcell">Вид&nbsp;товара</div></td><td><div class="hdrcell">Тип&nbsp;товара</div></td><td><div class="hdrcell">Торговая&nbsp;марка</div></td><td><div class="hdrcell">Товар&nbsp;в&nbsp;акции</div></td><td><div class="hdrcell">Ожидание&nbsp;акции</div></td><td><div class="hdrcell">Запрет&nbsp;закупки</div></td><td><div class="hdrcell">Признак&nbsp;разделения</div></td><td><div class="hdrcell">Код&nbsp;склада</div></td><td><div class="hdrcell">Формат</div></td><td><div class="hdrcell">Код&nbsp;поставщика</div></td><td><div class="hdrcell">Ед.измерения</div></td><td><div class="hdrcell">Производитель</div></td><td><div class="hdrcell">Код&nbsp;менеджера</div></td><td><div class="hdrcell">Буфер&nbsp;безопасности</div></td><td><div class="hdrcell">ББ-1</div></td><td><div class="hdrcell">Мин&nbsp;буфер</div></td><td><div class="hdrcell">Макс&nbsp;буфер</div></td><td><div class="hdrcell">MOQx1.5</div></td><td><div class="hdrcell">USQ</div></td><td><div class="hdrcell">Дата&nbsp;буфера</div></td><td><div class="hdrcell">Период</div></td><td><div class="hdrcell">Цена&nbsp;закупки</div></td><td><div class="hdrcell">Цена&nbsp;продажи</div></td><td><div class="hdrcell">Вес</div></td><td><div class="hdrcell">Объем</div></td><td><div class="hdrcell">Единоразовый&nbsp;заказ</div></td></tr></tbody></table></div><div class="objbox" style="width: 100%; overflow: auto; height: 534px;"><table cellpadding="0" cellspacing="0" class="obj" style="width: 5151px; table-layout: fixed;"><tbody><tr style="height: auto;"><th style="height: 0px; width: 93px;"></th><th style="height: 0px; width: 97px;"></th><th style="height: 0px; width: 76px;"></th><th style="height: 0px; width: 48px;"></th><th style="height: 0px; width: 55px;"></th><th style="height: 0px; width: 370px;"></th><th style="height: 0px; width: 69px;"></th><th style="height: 0px; width: 50px;"></th><th style="height: 0px; width: 77px;"></th><th style="height: 0px; width: 72px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 44px;"></th><th style="height: 0px; width: 52px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 95px;"></th><th style="height: 0px; width: 53px;"></th><th style="height: 0px; width: 102px;"></th><th style="height: 0px; width: 188px;"></th><th style="height: 0px; width: 216px;"></th><th style="height: 0px; width: 209px;"></th><th style="height: 0px; width: 244px;"></th><th style="height: 0px; width: 188px;"></th><th style="height: 0px; width: 370px;"></th><th style="height: 0px; width: 78px;"></th><th style="height: 0px; width: 111px;"></th><th style="height: 0px; width: 104px;"></th><th style="height: 0px; width: 94px;"></th><th style="height: 0px; width: 106px;"></th><th style="height: 0px; width: 100px;"></th><th style="height: 0px; width: 126px;"></th><th style="height: 0px; width: 77px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 104px;"></th><th style="height: 0px; width: 90px;"></th><th style="height: 0px; width: 98px;"></th><th style="height: 0px; width: 100px;"></th><th style="height: 0px; width: 126px;"></th><th style="height: 0px; width: 41px;"></th><th style="height: 0px; width: 76px;"></th><th style="height: 0px; width: 81px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 42px;"></th><th style="height: 0px; width: 85px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 90px;"></th><th style="height: 0px; width: 94px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 62px;"></th><th style="height: 0px; width: 126px;"></th></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735422" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380771/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68910</td><td align="left" valign="middle">Картопля мита</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д3</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Овочі</td><td align="left" valign="middle">Овочі свіжі вагові</td><td align="left" valign="middle">Картопля мита</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">7</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735421" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380771/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68910</td><td align="left" valign="middle">Картопля мита</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">65.074</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Овочі</td><td align="left" valign="middle">Овочі свіжі вагові</td><td align="left" valign="middle">Картопля мита</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735420" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380771/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68910</td><td align="left" valign="middle">Картопля мита</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д7</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Овочі</td><td align="left" valign="middle">Овочі свіжі вагові</td><td align="left" valign="middle">Картопля мита</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">21</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735419" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380771/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68910</td><td align="left" valign="middle">Картопля мита</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д4</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Овочі</td><td align="left" valign="middle">Овочі свіжі вагові</td><td align="left" valign="middle">Картопля мита</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">12</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735418" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380771/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68910</td><td align="left" valign="middle">Картопля мита</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д2</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Овочі</td><td align="left" valign="middle">Овочі свіжі вагові</td><td align="left" valign="middle">Картопля мита</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">11</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735417" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380771/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68910</td><td align="left" valign="middle">Картопля мита</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Свіжі овочі-фрукти</td><td align="left" valign="middle">Овочі</td><td align="left" valign="middle">Овочі свіжі вагові</td><td align="left" valign="middle">Картопля мита</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735416" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380643/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68909</td><td align="left" valign="middle">Джим Бім 40% Віскі 0,7л</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Напої</td><td align="left" valign="middle">Інші лікеро-горілчані вироби</td><td align="left" valign="middle">Віскі</td><td align="left" valign="middle">Віскі</td><td align="left" valign="middle">Джим Бім</td><td align="left" valign="middle">Віскі Джим  Бім 40% 0,7л</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Jim Beam</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735415" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380770/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68908</td><td align="left" valign="middle">Сигари Handelsgold Wood Cigarillos Chocolate 1шт.</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Тютюнові вироби</td><td align="left" valign="middle">Тютюнові вироби</td><td align="left" valign="middle">Сигари</td><td align="left" valign="middle">Стар Трейд</td><td align="left" valign="middle">Сигари</td><td align="left" valign="middle">Сигари Handelsgold Wood Cigarillos Chocolate 1шт.</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735414" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380765/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68907</td><td align="left" valign="middle">225 T Дно для тортов 206мм. 2,5л.</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Пакувальний матеріал</td><td align="left" valign="middle">Виробництво</td><td align="left" valign="middle">Власне виробництво</td><td align="left" valign="middle">Упаковка</td><td align="left" valign="middle">Упаковка (пластик.форми)</td><td align="left" valign="middle">225 T Дно для тортов 206мм. 2,5л.</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735413" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380692/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68906</td><td align="left" valign="middle">Лайон  Арахіс Кінг Сайз 66г+20%</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">24</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Солодощі з цукру і шоколаду</td><td align="left" valign="middle">Батончики шоколадні</td><td align="left" valign="middle">Нестле</td><td align="left" valign="middle">Лайон  Арахіс Кінг Сайз 66г+20%</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Нестле</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">36</td><td align="left" valign="middle">24</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">9.78</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735412" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380691/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68905</td><td align="left" valign="middle">Лайон  Арахіс Кінг Сайз 66 г.</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">24</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Солодощі з цукру і шоколаду</td><td align="left" valign="middle">Батончики шоколадні</td><td align="left" valign="middle">Нестле</td><td align="left" valign="middle">Лайон  Арахіс Кінг Сайз 66 г.</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Нестле</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">36</td><td align="left" valign="middle">24</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">9.78</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735411" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380732/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68904</td><td align="left" valign="middle">Палтус с/м , кг</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Риба, заморозка, соління</td><td align="left" valign="middle">Риба</td><td align="left" valign="middle">Риба с/м</td><td align="left" valign="middle">Тушка вагова</td><td align="left" valign="middle">Тушка вагова</td><td align="left" valign="middle">Палтус с/м , кг</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735410" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380563/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68903</td><td align="left" valign="middle">Соус Чумак Кухарський з прянощами Дой Пак 450г</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">24</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Бакалея</td><td align="left" valign="middle">Кулінарні добавки соуси</td><td align="left" valign="middle">Соуси, майонез</td><td align="left" valign="middle">Соуси інші</td><td align="left" valign="middle">Чумак</td><td align="left" valign="middle">Соус Чумак Кухарський з прянощами Дой Пак 450г</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Чумак</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">36</td><td align="left" valign="middle">24</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">12.8</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735409" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380647/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68902</td><td align="left" valign="middle">Набір 1+1=3 Немиров 0,5л</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Напої</td><td align="left" valign="middle">Інші лікеро-горілчані вироби</td><td align="left" valign="middle">Набори</td><td align="left" valign="middle">Наборы</td><td align="left" valign="middle">Деликат</td><td align="left" valign="middle">Наб.1+1=3 Нем.0,5</td><td align="left" valign="middle">Набор</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735408" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380569/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68901</td><td align="left" valign="middle">Сухарі Паніровочні 350г Любительські Золоте Зерно</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Бакалея</td><td align="left" valign="middle">Олії і Оцети</td><td align="left" valign="middle">Сіль і спеції</td><td align="left" valign="middle">Спеції</td><td align="left" valign="middle">Інші виробники (прянощі)</td><td align="left" valign="middle">Сухарі Паніровочні 350г Любительські Золоте Зерно</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Золоте зерно</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">6.49</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735407" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380608/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68900</td><td align="left" valign="middle">М"ясо Криля нат."Аква"deluxe 200г</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Бакалея</td><td align="left" valign="middle">Консерви</td><td align="left" valign="middle">Рибні</td><td align="left" valign="middle">Рибні консерви</td><td align="left" valign="middle">Аквамарин</td><td align="left" valign="middle">М"ясо Криля нат."Аква"deluxe 200г</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Аквамарин</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">38.42</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735406" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380623/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68899</td><td align="left" valign="middle">Горілка  Златогор Хлібна 0,5л Фляга</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">20</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Напої</td><td align="left" valign="middle">Горілка</td><td align="left" valign="middle">Горілка натуральна</td><td align="left" valign="middle">Горілка натур. звичайна 0.5л.</td><td align="left" valign="middle">Златогор</td><td align="left" valign="middle">Горілка  Златогор Хлібна '0,5л Фляга</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Златогор</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">30</td><td align="left" valign="middle">20</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">35.58</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735405" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380668/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68898</td><td align="left" valign="middle">Scholl Набір Електр.рол.пилка + змін.н.рожевий</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Непродовольчі товари</td><td align="left" valign="middle">Косметика і парфумерія</td><td align="left" valign="middle">Косметика і парфумерія</td><td align="left" valign="middle">Засоби для догляду за ногами</td><td align="left" valign="middle">Sholl</td><td align="left" valign="middle">Scholl Набір Електр.рол.пилка + змін.н.рожевий</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Scholl</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">519.74</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735404" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380667/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68897</td><td align="left" valign="middle">Scholl Набір Електр.рол.пилка + змін.насадки у под</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Непродовольчі товари</td><td align="left" valign="middle">Косметика і парфумерія</td><td align="left" valign="middle">Косметика і парфумерія</td><td align="left" valign="middle">Засоби для догляду за ногами</td><td align="left" valign="middle">Sholl</td><td align="left" valign="middle">Scholl Набір Електр.рол.пилка + змін.насадки у под</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Scholl</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">519.74</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735403" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380764/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68896</td><td align="left" valign="middle">Пакет 15*30/25 мкн  п/пропил. 1000 шт/уп</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Пакувальний матеріал</td><td align="left" valign="middle">Виробництво</td><td align="left" valign="middle">Власне виробництво</td><td align="left" valign="middle">Упаковка</td><td align="left" valign="middle">Упаковка зал</td><td align="left" valign="middle">Пакет 15*30/25 мкн  п/пропил. 1000 шт/уп</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">БТМ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Упак.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735402" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380562/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68895</td><td align="left" valign="middle">Мавпочка з серцем</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">NEW</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Товари для дітей</td><td align="left" valign="middle">Дитячі речі</td><td align="left" valign="middle">Аксесуари малі</td><td align="left" valign="middle">Іграшки для ванної/іграшки різні</td><td align="left" valign="middle">Тігрес</td><td align="left" valign="middle">Мавпочка з серцем</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Тигрес</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735401" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380561/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68894</td><td align="left" valign="middle">Мавпеня Тім Тімич</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Товари для дітей</td><td align="left" valign="middle">Дитячі речі</td><td align="left" valign="middle">Аксесуари малі</td><td align="left" valign="middle">Іграшки для ванної/іграшки різні</td><td align="left" valign="middle">Тігрес</td><td align="left" valign="middle">Мавпеня Тім Тімич</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Тигрес</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735400" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380560/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68893</td><td align="left" valign="middle">Мавпочка з метеликами</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Товари для дітей</td><td align="left" valign="middle">Дитячі речі</td><td align="left" valign="middle">Аксесуари малі</td><td align="left" valign="middle">Іграшки для ванної/іграшки різні</td><td align="left" valign="middle">Тігрес</td><td align="left" valign="middle">Мавпочка з метеликами</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Тигрес</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735399" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380559/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68892</td><td align="left" valign="middle">Мавпеня під пальмою</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Товари для дітей</td><td align="left" valign="middle">Дитячі речі</td><td align="left" valign="middle">Аксесуари малі</td><td align="left" valign="middle">Іграшки для ванної/іграшки різні</td><td align="left" valign="middle">Тігрес</td><td align="left" valign="middle">Мавпеня під пальмою</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Тигрес</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735398" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380558/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68891</td><td align="left" valign="middle">Мавпеня Нікко</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Товари для дітей</td><td align="left" valign="middle">Дитячі речі</td><td align="left" valign="middle">Аксесуари малі</td><td align="left" valign="middle">Іграшки для ванної/іграшки різні</td><td align="left" valign="middle">Тігрес</td><td align="left" valign="middle">Мавпеня Нікко</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Тигрес</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735397" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380557/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68890</td><td align="left" valign="middle">Мавпеня Тотті</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Товари для дітей</td><td align="left" valign="middle">Дитячі речі</td><td align="left" valign="middle">Аксесуари малі</td><td align="left" valign="middle">Іграшки для ванної/іграшки різні</td><td align="left" valign="middle">Тігрес</td><td align="left" valign="middle">Мавпеня Тотті</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">Тигрес</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735396" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380672/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68889</td><td align="left" valign="middle">Н/ф печива Макаронс</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Власне виробництво</td><td align="left" valign="middle">Кондитерські вироби Делікат</td><td align="left" valign="middle">Кондитерські вироби Делікат</td><td align="left" valign="middle">Н/ф</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Н/ф печива Макаронс</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Весовой</td><td align="left" valign="middle">ВВ Делікат</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Кг</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735395" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380702/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68888</td><td align="left" valign="middle">Драже "Морські камінці" 150г Дружкова</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Солодощі з цукру і шоколаду</td><td align="left" valign="middle">Драже</td><td align="left" valign="middle">ДПФ (Дружківка)</td><td align="left" valign="middle">Драже "Морські камінці" 150г Дружкова</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">ДПФ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">9.91</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735394" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380689/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68887</td><td align="left" valign="middle">Халва Бадьорість з какао 200 гр Дружківка</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Солодощі з цукру і шоколаду</td><td align="left" valign="middle">Халва</td><td align="left" valign="middle">Дружківка</td><td align="left" valign="middle">Халва Бадьорість з какао 200 гр Дружківка</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">ДПФ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">9.05</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735393" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380688/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68886</td><td align="left" valign="middle">Халва Ванільна 200г Дружківська</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Солодощі з цукру і шоколаду</td><td align="left" valign="middle">Халва</td><td align="left" valign="middle">Дружківка</td><td align="left" valign="middle">Халва Ванільна 200г Дружківська</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">ДПФ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">8.27</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" ev_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735392" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380687/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68885</td><td align="left" valign="middle">Халва з родзинками 200г Дружківська</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Солодощі з цукру і шоколаду</td><td align="left" valign="middle">Халва</td><td align="left" valign="middle">Дружківка</td><td align="left" valign="middle">Халва з родзинками 200г Дружківська</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">ДПФ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">9.28</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr class=" odd_web"><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle"><div class="btn-group btn-group-xs" style="min-width: 60px;"><a class="btn btn-link btn-xs" href="#sku-graph-modal" data-id="3735391" data-toggle="modal"><i class="fa fa-bar-chart-o"></i></a><a class="btn btn-link btn-xs" href="/test_delikat/catalogs/products/380686/edit"><i class="fa fa-file-text-o"></i></a></div><span class="hide">Action cell</span></td><td align="left" valign="middle">&nbsp;</td><td align="left" valign="middle" style="vertical-align: middle;"><img src="/../../img/dhtmlxgrid/dhxgrid_web/item_chk0_dis.gif" onclick="new eXcell_ch(this.parentNode).changeState(true); (arguments[0]||event).cancelBubble=true; "></td><td align="left" valign="middle">68884</td><td align="left" valign="middle">Халва Цукрова 200г Дружківська</td><td align="center" valign="middle"><i class="fa fa-square-o"></i></td><td align="left" valign="middle">Д5</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">1</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">0</td><td class="le3" align="left" valign="middle">0%</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Кондитерські вироби</td><td align="left" valign="middle">Солодощі з цукру і шоколаду</td><td align="left" valign="middle">Халва</td><td align="left" valign="middle">Дружківка</td><td align="left" valign="middle">Халва Цукрова 200г Дружківська</td><td align="left" valign="middle">Товар</td><td align="left" valign="middle">Штучный целый</td><td align="left" valign="middle">ДПФ</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">18</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">Шт.</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">0</td><td align="left" valign="middle">1.5</td><td align="left" valign="middle">1</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">8.19</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td><td align="left" valign="middle">--//--</td></tr><tr><td style="width: 1px; margin: 0px; padding: 0px; height: 34632px;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td></tr></tbody></table></div></div>
+</div>
+
+</div>
+</div>
+<div class="panel-footer">
+<div class="row">
+<div class="col-sm-6">
+<div class="page-entries" id="paging-info">Displaying records <b>1 - 50</b> of <b>328715</b></div>
+</div>
+<div class="col-sm-6 text-right" id="paging-area"><ul class="pagination pagination-sm m-t-none m-b-none"><li class="active"><a href="#" data-page="1">1</a></li><li><a href="#" data-page="2">2</a></li><li><a href="#" data-page="3">3</a></li><li><a href="#" data-page="4">4</a></li><li><a href="#" data-page="5">5</a></li><li><a href="#" data-page="6">6</a></li><li><a href="#" data-page="6575" title="Last page (6575)">»</a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="sku-graph-modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-default btn-xs btn" title="Закрыть" data-dismiss="modal" autocomplete="off"><i class="fa fa-remove mrg-right-0"></i>
+</button><button type="button" class="btn-default btn-xs toggle-fullscreen btn" title="Полноэкранный режим" autocomplete="off"><i class="fa fa-desktop mrg-right-0"></i>
+</button><h4 class="modal-title"></h4>
+</div>
+<div class="modal-body">
+<div id="sku-graph"></div>
+<div class="error">
+<div class="error-message"></div>
+<a class="btn btn-default sign-in-link hide" href="/login?company_id=test_delikat">Войти</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer class="page-foot">
+<div class="row">
+<div class="col-xs-12 vertical-cent">
+<p class="pull-left mrg-bot-0 mrg-left-40">© 2001-2015 ABM Cloud. Автоматизированная система управления запасами предприятия. Версия 1.7.1</p>
+</div>
+</div>
+</footer>
+
+</div>
+
+</div>
+<script src="http://abmcloud.us/assets/application-7cabb32a64d7fca4c0e8791394fbc1b5.js"></script>
+
+<script src="http://abmcloud.us/assets/controllers/panel/buffers_new_items-8082563f8381852963272314be79048c.js"></script>
+<div aria-hidden="true" class="modal fade" id="mass-update-modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<form class="simple_form form-horizontal ng-pristine ng-valid" autocomplete="off" novalidate="novalidate" action="/test_delikat/panel/buffers_new_items/mass_update" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="?"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="YFGvY3eA7umRCEdGUjPDl7YIPVtfAd+2tK4IrODRA2Ddawv9oVfmqx+DPkhG+LX1/gGhBoLffHbFut28uNd3FQ=="><div class="modal-header">
+<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">?</span>
+</button>
+<h4 class="modal-title">Mass update</h4>
+<div class="modal-body">
+<div class="form-group numeric optional mass_update_new_buffer"><label class="numeric optional col-sm-3 control-label" for="mass_update_new_buffer">New buffer</label><div class="col-sm-9"><input class="numeric numeric optional form-control" type="number" step="any" name="mass_update[new_buffer]" id="mass_update_new_buffer"></div></div>
+<div class="form-group boolean optional mass_update_mts"><div class="col-sm-offset-3 col-sm-9"><div class="checkbox"><input value="" type="hidden" name="mass_update[mts]"><label class="boolean optional" for="mass_update_mts"><input class="boolean optional col-sm-9" type="checkbox" value="1" name="mass_update[mts]" id="mass_update_mts">Mts</label></div></div></div>
+<div class="form-group numeric optional mass_update_order_once"><label class="numeric optional col-sm-3 control-label" for="mass_update_order_once">Order once</label><div class="col-sm-9"><input class="numeric numeric optional form-control" type="number" step="any" name="mass_update[order_once]" id="mass_update_order_once"></div></div>
+</div>
+</div>
+<div class="modal-footer">
+<input type="reset" name="commit" value="Отменить" class="btn btn-default">
+<input type="submit" name="commit" value="Принять изменения" class="btn btn-primary">
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<script>
+//<![CDATA[
+Routes._defaults['company_id'] = 'test_delikat';
+//]]>
+</script><script>
+//<![CDATA[
+window.FAYE_URL = "http://abmcloud.us:9292/faye";
+window.FAYE_KEY = "bebca1a30a151a69e2e94cd3d2d153ca";
+
+//]]>
+</script>
+<script>
+  I18n.defaultLocale = "en";
+  I18n.locale = "ru";
+  I18n.available_locales = "en,ru,uk";
+  I18n.missingPlaceholder = function(placeholder, message) {
+     return placeholder;
+  };
+</script>
+
+<script>
+angular.module('currentCompany', []).service('current_company', function(){
+    return {"name":"Тестовый Деликат","id":2,"slug":"test_delikat"};
+});
+</script>
+
+<script>
+angular.module('currentUser', []).service('current_user', function(){
+    return {"id":1,"first_name":"Super","last_name":"Admin","user_settings":[{"settings_type":"items_filters","settings_value":[{"fid":"6e9781d0-4509-4941-8452-ea82b196f566","name":"топ","table":"items","filters":[{"value":true,"compare":"=","column_name":"product_top"}]},{"fid":"af104f34-d5f0-4c63-8f20-4783a1bff11f","name":"имя","table":"items","filters":[{"value":"имя","compare":"=","column_name":"product_name"}]},{"fid":"b10a61cb-97a7-40e6-815b-05a9cfd9c62d","name":"123","table":"items","filters":[{"value":true,"compare":"=","column_name":"product_alt"},{"value":null,"compare":"=","column_name":"product_sku_group"},{"value":true,"compare":"=","column_name":"product_non"}]}]},{"settings_type":"warehouse_product_columns_default","settings_value":["active","warehouse","supplier","manager","moq","balance","buffer","buffer_date","in_transit"]},{"settings_type":"applied_items_filters","settings_value":{"fid":"e69c2323-7e77-4589-86e5-5e43bca4d910","table":"items","filters":[{"value":"имя","compare":"=","column_name":"product_name"}]}},{"settings_type":"inventory","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","balance","in_transit","bb_rate","btb_rate"]},{"settings_type":"item","settings_value":["name"]},{"settings_type":"warehouse_product","settings_value":["active","warehouse","supplier","manager","moq","balance","buffer","buffer_date","in_transit"]},{"settings_type":"buffer","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","buffer_date","balance","bb_rate","btb_rate","in_transit"]},{"settings_type":"buffers_change","settings_value":["buffer","name","warehouse","supplier","manager","movers","moq","balance","bb_rate","active","in_transit","btb_rate","buffer_date"]},{"settings_type":"buffers_new_item","settings_value":["name","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","buffer_date"]},{"settings_type":"order","settings_value":["supplier","warehouse","order_split_mark","manager","creation_date"]},{"settings_type":"edit_regular_order_item","settings_value":["name","movers","quantity","changes","btb_rate"]},{"settings_type":"edit_special_order_item","settings_value":["name","movers","quantity"]},{"settings_type":"placed_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"edit_placed_order_item","settings_value":["quantity","changes","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"confirm_placed_order_item","settings_value":["quantity","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"sent_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_item","settings_value":["name","sent_quantity","delivered_quantity"]},{"settings_type":"add_order_item","settings_value":["name","active","state","movers"]},{"settings_type":"buffer_columns_default","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","buffer_date","balance","bb_rate","btb_rate","in_transit"]},{"settings_type":"inventories_filters","settings_value":[{"fid":"e2801313-2846-42b7-9d12-245df5da71fe","name":"123","table":"inventories","filters":[{"value":true,"compare":"=","column_name":"wp_active"}]}]},{"settings_type":"buffers_new_item_columns_default","settings_value":["name","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","buffer_date"]},{"settings_type":"order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager","creation_date"]},{"settings_type":"placed_order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_columns_default","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"buffers_change_columns_default","settings_value":["buffer","name","warehouse","supplier","manager","movers","moq","balance","bb_rate","active","in_transit","btb_rate","buffer_date"]},{"settings_type":"item_columns","settings_value":["name","top","non","out","alt","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","measure_1","measure_2"]},{"settings_type":"buffers_change","settings_value":["buffer","name","warehouse","supplier","manager","movers","moq","balance","bb_rate","active","in_transit","btb_rate","buffer_date"]},{"settings_type":"buffers_new_item","settings_value":["name","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","buffer_date"]},{"settings_type":"edit_regular_order_item","settings_value":["name","movers","quantity","changes","btb_rate"]},{"settings_type":"edit_special_order_item","settings_value":["name","movers","quantity"]},{"settings_type":"placed_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"edit_placed_order_item","settings_value":["quantity","changes","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"item_columns_default","settings_value":["name","top","non","out","alt","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","measure_1","measure_2"]},{"settings_type":"inventory_columns_default","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","balance","in_transit","bb_rate","btb_rate"]},{"settings_type":"edit_regular_order_item_columns_default","settings_value":["name","movers","quantity","changes","btb_rate"]},{"settings_type":"edit_special_order_item_columns","settings_value":["name","movers","quantity"]},{"settings_type":"inventory","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","balance","in_transit","bb_rate","btb_rate"]},{"settings_type":"item","settings_value":["name"]},{"settings_type":"warehouse_product","settings_value":["active","warehouse","supplier","manager","moq","balance","buffer","buffer_date","in_transit"]},{"settings_type":"buffer","settings_value":["active","name","warehouse","supplier","manager","movers","moq","buffer","buffer_date","balance","bb_rate","btb_rate","in_transit"]},{"settings_type":"order","settings_value":["supplier","warehouse","order_split_mark","manager","creation_date"]},{"settings_type":"confirm_placed_order_item","settings_value":["quantity","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"sent_order","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_item","settings_value":["name","sent_quantity","delivered_quantity"]},{"settings_type":"system_access_log_columns_default","settings_value":[]},{"settings_type":"graph_log_columns_default","settings_value":[]},{"settings_type":"buffers_new_item_columns","settings_value":["name","active","warehouse","supplier","manager","movers","moq","buffer","balance","bb_rate","in_transit","btb_rate","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","additional_10","additional_11","additional_12","additional_13","additional_14","wh_additional_1","wh_additional_2","wh_additional_3","wh_additional_4","order_split_mark_code","warehouse_code","level","supplier_code","dimension","manufacturer","manager_code","safety_buffer","sb_1","min_buffer","max_buffer","moqx15","usq","buffer_date","season","purchase_price","sale_price","weight","volume","order_once"]},{"settings_type":"edit_special_order_item_columns_default","settings_value":["name","movers","quantity"]},{"settings_type":"add_order_item_columns_default","settings_value":["name","active","state","movers"]},{"settings_type":"applied_buffers_new_items_filters","settings_value":{"fid":"3098558e-5c9e-4985-8daa-316a1de4b988","table":"buffers_new_items","filters":[{"value":[2686],"compare":"=","column_name":"wp_supplier_code"}]}},{"settings_type":"add_order_item","settings_value":["name","active","state","movers"]},{"settings_type":"warehouse_product_columns","settings_value":["warehouse_code","supplier_code","level","supplier","manager","manager_code","state","moq","balance","buffer","buffer_date","pto","in_transit","order_split_mark_code","safety_buffer","sb_1","min_buffer","max_buffer","usq","season","purchase_price","sale_price","limit","order_once","new","new_till","wh_additional_1","wh_additional_2","wh_additional_3","wh_additional_4"]},{"settings_type":"edit_placed_order_item_columns_default","settings_value":["quantity","changes","name","movers","sent_quantity","delivered_quantity"]},{"settings_type":"confirm_placed_order_item_columns_default","settings_value":["name","movers","sent_quantity"]},{"settings_type":"buffers_change_columns","settings_value":["name","warehouse","supplier","manager","movers","moq","balance","bb_rate","active","in_transit","btb_rate","next_order_date","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","wh_additional_1","wh_additional_2","wh_additional_3","order_split_mark_code","warehouse_code","level","supplier_code","dimension","manufacturer","manager_code","safety_buffer","sb_1","min_buffer","max_buffer","buffer_date","usq","season","purchase_price","sale_price","weight","volume","order_once"]},{"settings_type":"buffer_columns","settings_value":["moq","active","sb_1","buffer","safety_buffer","next_order_date","name","bb_rate","btb_rate","balance","supplier","warehouse"]},{"settings_type":"order_schedule_log_columns_default","settings_value":[]},{"settings_type":"inventories_columns_width","settings_value":{"actions":"56","sku":"88","active":"69","name":"261","warehouse":"50","supplier":"83","manager":"72","movers":"62","state":"53","moq":"44","buffer":"55","sb_1":"40","pto":"40","in_transit":"53","bb_rate":"94","btb_rate":"102","amount_to_order":"125","balance":"59","next_order_date":"147","additional_1":"181","additional_2":"132","additional_3":"230","additional_4":"251","additional_5":"146","additional_6":"370","additional_7":"78","additional_8":"111","additional_9":"118","wh_additional_1":"93","wh_additional_2":"106","wh_additional_3":"99","order_split_mark_code":"126","warehouse_code":"76","level":"62","supplier_code":"103","dimension":"90","manufacturer":"97","manager_code":"99","safety_buffer":"126","min_buffer":"76","max_buffer":"80","usq":"42","btb_difference":"88","season":"62","purchase_price":"90","sale_price":"94","limit":"62","weight":"62","volume":"62"}},{"settings_type":"inventory_columns","settings_value":["active","name","warehouse","supplier","manager","movers","state","moq","buffer","sb_1","pto","in_transit","bb_rate","btb_rate","amount_to_order","balance","next_order_date","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","wh_additional_1","wh_additional_2","wh_additional_3","order_split_mark_code","warehouse_code","level","supplier_code","dimension","manufacturer","manager_code","safety_buffer","min_buffer","max_buffer","usq","btb_difference","season","purchase_price","sale_price","limit","weight","volume"]},{"settings_type":"inventory_log_columns_default","settings_value":[]},{"settings_type":"edit_regular_order_item_columns","settings_value":["movers","author","order_creation_date","item_notes","date","balance","order_quantity","buffer","free_amount","safety_buffer","order_id","changes","company_name","name","btb_rate","sum"]},{"settings_type":"applied_buffers_filters","settings_value":{"fid":"92a8cdd0-2647-4599-97e6-2e4357a3ce65","table":"buffers","filters":[{"value":true,"compare":"=","column_name":"wp_active"},{"value":0,"compare":"\u003e","column_name":"wp_safety_buffer"},{"value":0,"compare":"\u003e","column_name":"wp_sb1"},{"value":[4394],"compare":"=","column_name":"wp_supplier"}]}},{"settings_type":"sent_order_item_columns_default","settings_value":["name","sent_quantity","delivered_quantity","movers"]},{"settings_type":"supplier_log_columns_default","settings_value":[]},{"settings_type":"order_log_columns_default","settings_value":[]},{"settings_type":"edit_regular_order_items_columns_width","settings_value":{"change":"41","actions":"68","sku":"55","quantity":"78","movers":"55","item_notes":"73","balance":"59","safety_buffer":"126","buffer":"55","free_amount":"134","order_quantity":"49","changes":"76","name":"370","btb_rate":"102","sum":"104"}},{"settings_type":"applied_inventories_filters","settings_value":{"fid":"157c2d76-c635-490a-81b6-3491c41a18dd","table":"inventories","filters":[{"value":true,"compare":"=","column_name":"wp_active"},{"value":0,"compare":"\u003e","column_name":"wp_order_amount"},{"value":"2015-12-14","compare":"\u003e","column_name":"wp_next_order_date"}]}},{"settings_type":"placed_order_columns","settings_value":["supplier","warehouse","order_split_mark","manager"]},{"settings_type":"sent_order_item_columns","settings_value":["name","sent_quantity","delivered_quantity","active","supplier_item_code","supplier_item_description","additional_1","additional_2","additional_3","additional_4","additional_5","additional_6","additional_7","additional_8","additional_9","wh_additional_1","wh_additional_2","wh_additional_3","movers","dimension","weight","volume","sum","sum_in_suppliers_currency","purchase_price","purchase_price_in_suppliers_currency","sale_price","usq","moq","order_quantity","quantity_in_suppliers_dimension","order_id","order_creation_date","company_name","warehouse_name","address","date","supplier_name","currency","author","buffer","balance","safety_buffer","order_split_mark","item_notes"]}]};
+});
+</script>
+
+
+
+<div></div></body></html>
