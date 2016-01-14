@@ -1,4 +1,3 @@
-
 //Elements
 @mixin checkbox-nice($class, $margin, $size){
     #{$class} {
@@ -65,12 +64,13 @@
             background: $trans;
             border:none;
             font-size:  $btn_text_up_size;
-            font-weight: 500;
+            font-weight: 400;
            padding: 6px 13px;
             margin: 0 5px 0 0;
             color: $text-color;
         text-transform: uppercase;
     margin-left: 5px;
+    border-radius: 3px;
     &:hover{
         cursor:pointer $i;
 
@@ -87,17 +87,18 @@
 @mixin btn-flat-icon(){
             background: $trans;
             border:none;
-            font-size:  $btn_text_up_size;
-            font-weight: 500;
+            font-size:  $btn_icon_size;
+            font-weight: 400;
             padding: 6px 13px;
             margin: 0 5px 0 0;
             color: $main_col1 $i;
             margin-left: 5px;
+            border-radius: 3px;
     i,
     span{
         font-size: $btn_icon_size;
         margin: 0 0px 0 0;
-         padding: 0 3px 0 3px;
+
         color: $main_col1 $i;
 
     }
@@ -105,6 +106,7 @@
     &:hover{
         background: $trans;
          box-shadow: $shadow-small;
+        border-radius: 3px;
         i{
         cursor:pointer $i;
         color: $accent_col;
@@ -115,6 +117,7 @@
     &:active{
        box-shadow: $shadow-small-inset;
          background: $divider-1;
+        border-radius: 3px;
         i{
         cursor:pointer $i;
         color: $accent_col;
@@ -140,7 +143,7 @@
             background: $accent_col $i;
             border:none;
             margin: 0 5px 0 0;
-            font-size:  $btn_text_up_size;
+            font-size:  $btn_text_size;
             font-weight: 500;
             padding: 6px 13px;
             color: $white;
@@ -289,17 +292,20 @@
     }}
 @mixin page-title-plus(){
     .panel-heading{
-        border-radius: 3px $i;
+        border-radius: 2px $i;
+        padding: 10px 0px 10px 0px;
         span{
             color:$text_col2;
-            margin: 10px 0 0px 35px $i;
+            margin: 10px 0 0px 63px;
+
+
             font-weight:400 $i ;
             font-size: $lable_size;
             float:left;
             }
          .page-title h1{
             color:$text_col2 $i;
-            margin: 35px 0 0px 35px $i;
+            margin: 35px 0 0px 63px $i;
             font-weight:100 $i ;
             font-size: $title_size;
             }
@@ -426,17 +432,17 @@
             }
         }
     .menu::-webkit-scrollbar {
-        width: 15px !important;
+        width: 8px !important;
         border-bottom:2px solid $main_col;
         }
     .menu::-webkit-scrollbar-thumb {
         background-color: $main_col1;
-        box-shadow: -1px 1px 5px 0px $main_col5-opacity;
+
 
         }
     .menu:hover::-webkit-scrollbar-thumb {
         background-color: $main_col1;
-        box-shadow: -1px 1px 5px 0px $main_col5;
+
 
         }
 
@@ -465,35 +471,47 @@
 
 @mixin nav-panel(){
     .panel-heading .nav {
-        margin:16px 0 0px 0;
+        margin:21px 0 0px 0;
+
         background:$main_col-2;
-        height:38px;
-        border-bottom:1px solid $main_col5;
-       a{
-            font-weight:400;
+        height:44px;
+        text-transform: uppercase;
+        border-radius: 1px;
+        span{
+           width: 0px;
+            margin: 10px;
+            padding: 0px;
+        }
+        a{
+            font-weight:300;
             color:$text_col;
-           padding: 15px 25px;
+           padding: 15px 32px;
+           border-radius: 0px;
             }
         :not(.active) a{
-            background:$main_col-2;
+
             color:$white;
-            height:38px;
-            padding-top:9px;
-            border-bottom:1px solid $main_col5;
-              font-size:$menu_size_sm;
+            height:43px;
+            padding-top:14px;
+           border: none;
+              font-size:$btn_text_up_size;
+            opacity: 0.7;
+
             }
         :not(.active) a:hover{
-            border-bottom:1px solid $white;
+           background:$main_col-2;
+            opacity: 0.9;
             }
         .active a{
-            background:$white;
-            font-size:$menu_size_sm;
-            font-weight:400;
-            color:$text_col;
-            border-top:1px solid $divider;
-            border-right:1px solid $divider;
-            height:38px;
-            padding-top:9px;
+            background:$main_col-2;
+            font-size:$btn_text_up_size;
+            font-weight:300;
+            color:$white;
+            border: none;
+            border-bottom:1.5px solid $accent_col$i;
+            height:43px;
+            padding-top:13.7px;
+            transition: .4s;
             }
         }
     }
