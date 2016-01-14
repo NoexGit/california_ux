@@ -1,9 +1,10 @@
 @import"var";
 @import"mixins";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 body{
     background-color:$main_col-5;
     color: $text_col;
-    font-family: Helvetica Neue ,Helvetica,Arial,sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
     }
 @include left-panel-nice();
 @include logout-panel-nice();
