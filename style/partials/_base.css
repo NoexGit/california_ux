@@ -8,116 +8,170 @@ body {
   color: #212121;
   font-family: 'Roboto', sans-serif !important; }
 
-/* line 315, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 316, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .left-panel {
-  min-width: 240px;
+  min-width: 190px;
+  flex-basis: 190px;
   background-color: #607D8B;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  /* line 320, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+  /* line 321, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+  .left-panel .head-logo:after {
+    background: none;
+    height: 0px; }
+  /* line 326, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+  .left-panel .head-logo {
+    height: 100px;
+    padding: 18px 0 20px 0; }
+  /* line 331, D:/Dropbox/back up/git/style/partials/_mixins.scss */
   .left-panel a {
     color: #FFFFFF !important;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500; }
-  /* line 325, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+  /* line 338, D:/Dropbox/back up/git/style/partials/_mixins.scss */
   .left-panel .handle {
-    background: #607D8B !important; }
-  /* line 329, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    background: #FFFFFF !important;
+    height: 40px;
+    width: 12px;
+    margin: -125px 5px 0px 0px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    /* line 344, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .left-panel .handle span {
+      margin: 12px 0 0px 3px !important;
+      color: red !important; }
+  /* line 349, D:/Dropbox/back up/git/style/partials/_mixins.scss */
   .left-panel .menu {
+    margin-top: 20px;
     max-height: 78%;
     padding: 0 10px 10px 10px;
     overflow-y: scroll; }
-    /* line 334, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    /* line 355, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .left-panel .menu img {
+      width: 20px; }
+    /* line 358, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .left-panel .menu i {
+      font-size: 20px !important; }
+    /* line 363, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .left-panel .menu .fa-angle-right {
+      font-size: 15px !important;
+      padding: 0px 15px 0px 6px;
+      margin: 5px 0 0 0 !important;
+      animation: open-menu-span 0.6s ease-out; }
+    /* line 370, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .left-panel .menu .fa-angle-down {
+      font-size: 15px !important;
+      padding: 0px 19px 0px 6px;
+      margin: 5px 0 0 0 !important;
+      animation: open-menu-span 0.6s ease-out; }
+    /* line 377, D:/Dropbox/back up/git/style/partials/_mixins.scss */
     .left-panel .menu li {
       background: #607D8B !important; }
-      /* line 337, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+      /* line 380, D:/Dropbox/back up/git/style/partials/_mixins.scss */
       .left-panel .menu li :hover {
         box-shadow: -1px 0px 0 0px #56707d;
         background: #607D8B !important; }
-      /* line 341, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+      /* line 384, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+      .left-panel .menu li .first-level {
+        padding: 8px 0 9px 10px;
+        overflow: hidden;
+        white-space: nowrap; }
+      /* line 389, D:/Dropbox/back up/git/style/partials/_mixins.scss */
       .left-panel .menu li .first-level:hover {
         background: #78909c !important; }
-      /* line 344, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+      /* line 392, D:/Dropbox/back up/git/style/partials/_mixins.scss */
       .left-panel .menu li span {
-        animation: open-menu-span 0.6s ease-out; }
-      /* line 347, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+        margin: 2px 0 0 5px; }
+      /* line 398, D:/Dropbox/back up/git/style/partials/_mixins.scss */
       .left-panel .menu li ul li a {
-        padding-left: 60px; }
-      /* line 352, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+        padding: 7px 0 7px 40px; }
+      /* line 403, D:/Dropbox/back up/git/style/partials/_mixins.scss */
       .left-panel .menu li ul,
       .left-panel .menu li ul li,
       .left-panel .menu li ul li a {
+        border: none;
         background: #78909c !important;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500; }
-      /* line 358, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+      /* line 410, D:/Dropbox/back up/git/style/partials/_mixins.scss */
       .left-panel .menu li ul li {
         width: 100%; }
-      /* line 365, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+      /* line 417, D:/Dropbox/back up/git/style/partials/_mixins.scss */
       .left-panel .menu li i:hover {
         background: #78909c !important; }
-    /* line 369, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    /* line 421, D:/Dropbox/back up/git/style/partials/_mixins.scss */
     .left-panel .menu .active .first-level {
       border-radius: 0%;
       background: #607D8B !important;
       border-left: 1px solid #FF9800; }
-    /* line 377, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    /* line 429, D:/Dropbox/back up/git/style/partials/_mixins.scss */
     .left-panel .menu .active .open {
+      border: none;
       background: #90a4ae !important;
       border-left: none; }
-    /* line 384, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    /* line 436, D:/Dropbox/back up/git/style/partials/_mixins.scss */
     .left-panel .menu .active .active a {
       box-shadow: inset 1px 1px 4px 0px #455A64;
       border-radius: 0%;
       background: #607D8B !important;
       border-left: 1px solid #FF9800; }
-    /* line 393, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    /* line 445, D:/Dropbox/back up/git/style/partials/_mixins.scss */
     .left-panel .menu .open {
       border-bottom: 1px solid #56707d;
       background: #90a4ae !important; }
 
-/* line 401, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-.closed-panel .left-panel .head-logo {
-  padding: 18px 0 27px 0; }
-  /* line 404, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-  .closed-panel .left-panel .head-logo img {
-    margin: 0px auto 15px; }
+/* line 453, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+.closed-panel .work-area {
+  max-width: calc(100% - 50px); }
 
-/* line 408, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-.closed-panel .left-panel .menu {
-  overflow: visible;
-  padding: 0px 7px 0px 7px; }
-  /* line 413, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-  .closed-panel .left-panel .menu li :hover {
-    border-bottom: none; }
-  /* line 418, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-  .closed-panel .left-panel .menu li .active,
-  .closed-panel .left-panel .menu li .active .first-level,
-  .closed-panel .left-panel .menu li .open {
-    border-bottom: none; }
-  /* line 422, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-  .closed-panel .left-panel .menu li span {
-    width: 0px !important; }
-  /* line 425, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-  .closed-panel .left-panel .menu li a {
-    padding: 10px 0px 10px 0px; }
-  /* line 428, D:/Dropbox/back up/git/style/partials/_mixins.scss */
-  .closed-panel .left-panel .menu li ul li a {
-    padding-left: 0px; }
+/* line 459, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+.closed-panel .left-panel {
+  flex-basis: 60px;
+  min-width: 60px; }
+  /* line 462, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+  .closed-panel .left-panel .head-logo {
+    height: 100px;
+    padding: 18px 0 5px 0; }
+    /* line 465, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .closed-panel .left-panel .head-logo :after {
+      background: none; }
+    /* line 471, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .closed-panel .left-panel .head-logo img {
+      margin: 0px auto 15px; }
+  /* line 475, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+  .closed-panel .left-panel .menu {
+    overflow: visible;
+    padding: 0px 7px 0px 7px; }
+    /* line 480, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .closed-panel .left-panel .menu li :hover {
+      border-bottom: none; }
+    /* line 485, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .closed-panel .left-panel .menu li .active,
+    .closed-panel .left-panel .menu li .active .first-level,
+    .closed-panel .left-panel .menu li .open {
+      border-bottom: none; }
+    /* line 489, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .closed-panel .left-panel .menu li span {
+      width: 0px !important; }
+    /* line 493, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .closed-panel .left-panel .menu li a {
+      padding: 10px 0px 10px 0px; }
+    /* line 496, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+    .closed-panel .left-panel .menu li ul li a {
+      padding-left: 0px; }
 
-/* line 434, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 502, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .menu::-webkit-scrollbar {
   width: 8px !important;
   border-bottom: 2px solid #607D8B; }
 
-/* line 438, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 506, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .menu::-webkit-scrollbar-thumb {
-  background-color: #56707d; }
+  background-color: #607D8B; }
 
-/* line 443, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 511, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .menu:hover::-webkit-scrollbar-thumb {
-  background-color: #56707d; }
+  background-color: #78909c; }
 
-/* line 451, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 519, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .logout-panel {
   width: 190px;
   height: 30px;
@@ -125,55 +179,66 @@ body {
   background: white;
   display: none; }
 
-/* line 458, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 526, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .item-log-panel {
   margin: -10px 0 0 0;
   font-size: 10px; }
 
-/* line 462, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 530, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .item-log-panel i {
   margin: 10px 0 0 0;
   font-size: 15px !important; }
 
-/* line 466, D:/Dropbox/back up/git/style/partials/_mixins.scss */
+/* line 534, D:/Dropbox/back up/git/style/partials/_mixins.scss */
 .item-log-panel .fa-power-off {
   margin: 6px 0 0 0; }
 
 /* line 11, D:/Dropbox/back up/git/style/partials/_base.scss */
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+/* line 17, D:/Dropbox/back up/git/style/partials/_base.scss */
+.panel.block,
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+  border: none; }
+
+/* line 22, D:/Dropbox/back up/git/style/partials/_base.scss */
 .work-area {
-  margin-left: 25px;
-  max-width: calc(100% - 283px);
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 17px;
+  max-width: calc(100% - 210px);
   padding-bottom: 0px;
   padding-top: 10px; }
-  /* line 16, D:/Dropbox/back up/git/style/partials/_base.scss */
+  /* line 30, D:/Dropbox/back up/git/style/partials/_base.scss */
   .work-area td {
     border: none !important;
     font-size: 11px !important; }
-  /* line 20, D:/Dropbox/back up/git/style/partials/_base.scss */
+  /* line 34, D:/Dropbox/back up/git/style/partials/_base.scss */
   .work-area tr:hover {
     background: #EDF1F4;
     color: #455A64 !important; }
 
-/* line 25, D:/Dropbox/back up/git/style/partials/_base.scss */
+/* line 39, D:/Dropbox/back up/git/style/partials/_base.scss */
 .panel {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 3px !important; }
 
-/* line 29, D:/Dropbox/back up/git/style/partials/_base.scss */
+/* line 43, D:/Dropbox/back up/git/style/partials/_base.scss */
 .panel-heading {
   background: #FFFFFF !important; }
 
-/* line 32, D:/Dropbox/back up/git/style/partials/_base.scss */
+/* line 46, D:/Dropbox/back up/git/style/partials/_base.scss */
 .page-foot {
   display: none; }
 
 @keyframes open-menu-span {
   0% {
-    opacity: 0;
-    margin: 0px 0 0 -5px;
-    width: 10px; }
+    position: absolute; }
   100% {
-    opacity: 1;
-    width: 100%; } }
+    float: right !important; } }
 
 /*# sourceMappingURL=_base.css.map */
