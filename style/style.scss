@@ -116,10 +116,10 @@
             padding-right: 0px;
         }
         .col-md-2 {
-             width:5%;
+             width:3%;
         }
         .col-md-5 {
-             width:50%;
+             width:53%;
         }
         .col-md-4 {
              width:40%;
@@ -351,11 +351,11 @@
         .panel-heading{
             padding-bottom: 20px;
             span{
-                margin: 19px+$delta_l 0 0px 20px $i;
+                margin: 19px+$delta_l 0 0px 60px;
                 font-size: $lable_size_l;
                 }
             .page-title h1{
-                margin: 48px+$delta_l 0 0px 20px $i;
+                margin: 48px+$delta_l 0 0px 60px $i;
                 font-size: $title_size_l;
                 }
             }
@@ -365,14 +365,14 @@
             height:42px;
 
             :not(.active) a{
-                height:42px;
-                padding-top:7px;
-                  font-size:$menu_size_l;
+                height:41px;
+                padding-top:12px;
+                  font-size:$btn_text_up_size_l;
                 }
             .active a{
-                font-size:$menu_size_l;
-                height:42px;
-                padding-top:7px;
+                font-size:$btn_text_up_size_l;
+                height:41px;
+                padding-top:12px;
                 }
             }
 
@@ -392,7 +392,7 @@
 
             }
          .btn{
-            margin:-90px 10px 0px 0px;
+
             }
         .btn-success{
             font-size:  $btn_text_up_size_l;
@@ -400,6 +400,7 @@
             }
         .btn-primary{
             font-size: $btn_text_size_l;
+             margin:-85px 10px 0px 0px $i;
             }
         .boolean {
             font-size: $lable_size_l $i;
