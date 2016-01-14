@@ -129,8 +129,8 @@
         }
         .wrapper-md{
 
-            border: 2px solid $main_col-5;
-            margin: -25px 0px 0 10px;
+            border: 1px solid $main_col-5;
+            margin: -25px 10px 0 0px;
              padding-bottom: 7px;
              padding-top: 4px;
             }
@@ -144,7 +144,7 @@
             color:$text_col;
             }
         .btn{
-            margin:-75px 10px 0px 0px;
+            margin:-77px 10px 0px 0px;
             padding: 7px 9px 7px 9px;
             }
         .btn:hover{
@@ -227,7 +227,7 @@
     .tab-pane,
     .tab-content,
     form{
-        padding: 0 0 0 0;
+        padding: 0px 0 0 0;
 
     }
     form{
