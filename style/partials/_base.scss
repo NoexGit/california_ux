@@ -8,11 +8,25 @@ body{
     }
 @include left-panel-nice();
 @include logout-panel-nice();
- .work-area {
-     margin-left: 25px;
-     max-width: calc(100% - 283px);
+.container-fluid{
+
+    padding-left: 0px;
+    padding-right: 0px;}
+
+.panel.block,
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+}
+.work-area {
+      padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 17px;
+     max-width: calc(100% - 210px);
      padding-bottom: 0px;
-            padding-top: 10px;
+     padding-top: 10px;
+
      td{
             border:none $i;
             font-size: $input_size_sm $i;
@@ -31,6 +45,11 @@ body{
     }
 .page-foot{display: none;}
 @keyframes open-menu-span {
-        0% {opacity:0; margin:0px 0 0 -5px; width:10px; }
-        100% {opacity:1; width:100%;}
-        }
+        0% {
+
+            position: absolute;
+            }
+        100% {float: right $i;
+            };
+            }
+
